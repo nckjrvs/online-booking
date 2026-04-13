@@ -4,6 +4,21 @@
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* ── Page entrance animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+nav { animation: fadeUp 0.4s ease-out; }
+.page-header { animation: fadeUp 0.5s ease-out 0.05s both; }
+.hero { animation: fadeUp 0.5s ease-out 0.05s both; }
+section { animation: fadeUp 0.5s ease-out 0.1s both; }
+.layout-sidebar { animation: fadeUp 0.5s ease-out 0.1s both; }
+.confirm-hero { animation: fadeUp 0.5s ease-out 0.05s both; }
+.confirm-card { animation: fadeUp 0.5s ease-out 0.15s both; }
+footer { animation: fadeUp 0.4s ease-out 0.2s both; }
+
 :root {
   --brand-primary: #1e2f25;
   --brand-primary-hover: #162219;
@@ -93,7 +108,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 4px;
-  background: var(--brand-light);
+  background: rgba(255,255,255,0.1);
   border-radius: var(--radius-full);
   padding: 3px;
   margin-right: 8px;
@@ -105,17 +120,16 @@ nav {
   border-radius: var(--radius-full);
   border: none;
   background: transparent;
-  color: var(--text-secondary);
+  color: rgba(255,255,255,0.5);
   cursor: pointer;
   transition: all 0.2s;
   font-family: var(--sans);
 }
 .nav-location-btn.active {
-  background: var(--bg-white);
-  color: var(--brand-primary);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.15);
+  color: white;
 }
-.nav-location-btn:hover:not(.active) { color: var(--brand-primary); }
+.nav-location-btn:hover:not(.active) { color: rgba(255,255,255,0.7); }
 
 /* ── Buttons ── */
 .btn-primary {

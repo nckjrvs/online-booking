@@ -92,9 +92,9 @@
   <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
     <a href="index.html" class="nav-logo" style="color:white">Edge Men's</a>
     <div class="nav-links">
-      <div class="nav-location-toggle" style="background:rgba(255,255,255,0.1)">
-        <button class="nav-location-btn active" style="background:rgba(255,255,255,0.15);color:white">SLC</button>
-        <button class="nav-location-btn" style="color:rgba(255,255,255,0.5)">Lehi</button>
+      <div class="nav-location-toggle">
+        <button class="nav-location-btn active">SLC</button>
+        <button class="nav-location-btn">Lehi</button>
       </div>
       <a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a>
       <a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a>
@@ -252,5 +252,6 @@ document.querySelectorAll('.nav-location-btn').forEach(btn => {
   btn.addEventListener('click', () => switchLocation(btn.textContent.trim()));
 });
 </script>
+<script src="../location-sync.js"></script>
 </body>
 </html>
