@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book — SLC | Rise Rejuvenation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    :root {
+      --brand-primary: #77412c;
+      --brand-primary-hover: #643625;
+      --brand-dark: #141a36;
+      --brand-light: #f6f2f0;
+      --brand-accent: #c9a96e;
+      --brand-rose: #d4c0b4;
+      --text-primary: #141a36;
+      --text-secondary: #4a4458;
+      --text-light: #8a8498;
+      --border: #dcd6d2;
+    }
+    .category-section { margin-bottom: 48px; }
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--border);
+    }
+    .category-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: var(--brand-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    .category-header h2 { font-family: var(--serif); font-size: 26px; font-weight: 500; }
+    .category-header .count { font-size: 13px; color: var(--text-light); margin-left: auto; }
+    .location-context {
+      background: var(--brand-light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+      font-size: 14px;
+    }
+    .location-context strong { color: var(--brand-primary); }
+    .location-context .change {
+      margin-left: auto;
+      font-size: 13px;
+      color: var(--brand-primary);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
+    <a href="index.html" class="nav-logo" style="color:white">Rise Rejuvenation</a>
+    <div class="nav-links">
+      <div class="nav-location-toggle" style="background:rgba(255,255,255,0.1)">
+        <button class="nav-location-btn active" style="background:rgba(255,255,255,0.15);color:white">SLC</button>
+        <button class="nav-location-btn" style="color:rgba(255,255,255,0.5)">Provo</button>
+        <button class="nav-location-btn" style="color:rgba(255,255,255,0.5)">Lehi</button>
+      </div>
+      <a href="book.html" class="active" style="color:white">Services</a>
+      <a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a>
+      <a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a>
+      <a href="book.html" class="nav-cta">Book Now</a>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="index.html">Rise Rejuvenation</a>
+    <span class="sep">/</span>
+    <span>Book — Salt Lake City</span>
+  </div>
+
+  <div class="page-header">
+    <h1>Book at Salt Lake City</h1>
+    <p>Browse services and pricing for our SLC studio. Toggle locations to compare.</p>
+  </div>
+
+  <section>
+    <div class="layout-sidebar" style="max-width:1024px;margin:0 auto">
+      <div>
+
+      <!-- Location context bar -->
+      <div class="location-context">
+        <span>📍</span>
+        Showing services and pricing for <strong>Salt Lake City</strong> &middot; 1284 East 2100 South
+        <a href="index.html#locations" class="change">Change location</a>
+      </div>
+
+      <!-- Injectables -->
+      <div class="category-section">
+        <div class="category-header">
+          <div class="category-icon">💉</div>
+          <h2>Injectables</h2>
+          <div class="count">5 services</div>
+        </div>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon">💉</div>
+          <div class="service-list-info"><h4>Botox</h4><p>Smooth fine lines and wrinkles</p></div>
+          <div class="service-list-meta"><div class="price">$12/unit</div><div class="duration">30 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon">💉</div>
+          <div class="service-list-info"><h4>Dysport</h4><p>Fast-acting wrinkle relaxer</p></div>
+          <div class="service-list-meta"><div class="price">$10/unit</div><div class="duration">30 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon">💉</div>
+          <div class="service-list-info"><h4>Lip Filler</h4><p>Juvederm Ultra for volume and definition</p></div>
+          <div class="service-list-meta"><div class="price">$700/syringe</div><div class="duration">45 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon">💉</div>
+          <div class="service-list-info"><h4>Cheek Filler</h4><p>Restore volume with Juvederm Voluma</p></div>
+          <div class="service-list-meta"><div class="price">$800/syringe</div><div class="duration">45 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon">💉</div>
+          <div class="service-list-info"><h4>Kybella</h4><p>Double chin reduction</p></div>
+          <div class="service-list-meta"><div class="price">$1,400</div><div class="duration">30 min</div></div>
+        </a>
+      </div>
+
+      <!-- Laser -->
+      <div class="category-section">
+        <div class="category-header">
+          <div class="category-icon">✨</div>
+          <h2>Laser Treatments</h2>
+          <div class="count">3 services</div>
+        </div>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon" style="background:#f0ebe6">✨</div>
+          <div class="service-list-info"><h4>Laser Hair Removal</h4><p>Permanent hair reduction</p></div>
+          <div class="service-list-meta"><div class="price">From $175</div><div class="duration">15–60 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon" style="background:#f0ebe6">✨</div>
+          <div class="service-list-info"><h4>IPL Photofacial</h4><p>Sun damage and pigmentation</p></div>
+          <div class="service-list-meta"><div class="price">$400</div><div class="duration">30 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon" style="background:#f0ebe6">✨</div>
+          <div class="service-list-info"><h4>Laser Resurfacing</h4><p>Fractional CO2 for texture and scarring</p></div>
+          <div class="service-list-meta"><div class="price">$900</div><div class="duration">45 min</div></div>
+        </a>
+      </div>
+
+      <!-- Facials -->
+      <div class="category-section">
+        <div class="category-header">
+          <div class="category-icon">🧴</div>
+          <h2>Medical Facials</h2>
+          <div class="count">3 services</div>
+        </div>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon" style="background:#ede8e2">🧴</div>
+          <div class="service-list-info"><h4>HydraFacial</h4><p>Deep cleanse, exfoliate, hydrate</p></div>
+          <div class="service-list-meta"><div class="price">$225</div><div class="duration">45 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon" style="background:#ede8e2">🧴</div>
+          <div class="service-list-info"><h4>Chemical Peel</h4><p>Medical-grade peels</p></div>
+          <div class="service-list-meta"><div class="price">$200</div><div class="duration">30 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon" style="background:#ede8e2">🧴</div>
+          <div class="service-list-info"><h4>Microneedling + PRP</h4><p>Collagen induction with platelet-rich plasma</p></div>
+          <div class="service-list-meta"><div class="price">$450</div><div class="duration">60 min</div></div>
+        </a>
+      </div>
+
+      </div>
+
+      <!-- Hours Sidebar -->
+      <div>
+        <div class="sidebar-card" id="hours-card">
+          <h3>Hours of Operation</h3>
+          <div class="sidebar-row"><span class="label">Sunday</span><span class="value">Closed</span></div>
+          <div class="sidebar-row"><span class="label">Monday</span><span class="value">9 AM – 7 PM</span></div>
+          <div class="sidebar-row"><span class="label">Tuesday</span><span class="value">9 AM – 7 PM</span></div>
+          <div class="sidebar-row"><span class="label">Wednesday</span><span class="value">9 AM – 7 PM</span></div>
+          <div class="sidebar-row"><span class="label">Thursday</span><span class="value">9 AM – 7 PM</span></div>
+          <div class="sidebar-row"><span class="label">Friday</span><span class="value">9 AM – 7 PM</span></div>
+          <div class="sidebar-row"><span class="label">Saturday</span><span class="value">9 AM – 4 PM</span></div>
+          <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);font-size:13px;color:var(--text-light)">
+            <div style="margin-bottom:4px"><strong style="color:var(--text-primary)">📍 Salt Lake City</strong></div>
+            1284 East 2100 South<br>(801) 555-7473
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div><div class="footer-brand">Rise Rejuvenation</div><div class="footer-address">SLC &middot; Provo &middot; Lehi</div></div>
+      <div class="footer-links"><a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a><a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a><a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a></div>
+    </div>
+    <div class="footer-bottom"><a href="../index.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;text-underline-offset:2px">← All Portals</a> · Powered by Podium &middot; &copy; 2026 Rise Rejuvenation.</div>
+  </footer>
+
+<script>
+const locations = {
+  SLC: {
+    name: 'Salt Lake City', short: 'SLC',
+    address: '1284 East 2100 South',
+    services: {
+      'Botox': '$12/unit', 'Dysport': '$10/unit', 'Lip Filler': '$700/syringe',
+      'Cheek Filler': '$800/syringe', 'Kybella': '$1,400',
+      'Laser Hair Removal': 'From $175', 'IPL Photofacial': '$400', 'Laser Resurfacing': '$900',
+      'HydraFacial': '$225', 'Chemical Peel': '$200', 'Microneedling + PRP': '$450'
+    }
+  },
+  Provo: {
+    name: 'Provo', short: 'Provo',
+    address: '562 West Center Street',
+    services: {
+      'Botox': '$11/unit', 'Dysport': '$9/unit', 'Lip Filler': '$650/syringe',
+      'Cheek Filler': '$750/syringe', 'Kybella': '$1,300',
+      'Laser Hair Removal': 'From $150', 'IPL Photofacial': '$375', 'Laser Resurfacing': '$850',
+      'HydraFacial': '$199', 'Chemical Peel': '$185', 'Microneedling + PRP': '$425'
+    }
+  },
+  Lehi: {
+    name: 'Lehi', short: 'Lehi',
+    address: '3450 Triumph Boulevard',
+    services: {
+      'Botox': '$12/unit', 'Dysport': '$10/unit', 'Lip Filler': '$675/syringe',
+      'Cheek Filler': '$775/syringe', 'Kybella': '$1,350',
+      'Laser Hair Removal': 'From $160', 'IPL Photofacial': '$385', 'Laser Resurfacing': '$875',
+      'HydraFacial': '$210', 'Chemical Peel': '$190', 'Microneedling + PRP': '$435'
+    }
+  }
+};
+
+function switchLocation(loc) {
+  const data = locations[loc];
+  if (!data) return;
+
+  document.querySelectorAll('.nav-location-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.trim() === loc);
+  });
+
+  // Breadcrumb
+  const bc = document.querySelector('.breadcrumb span:last-child');
+  if (bc) bc.textContent = 'Book — ' + data.name;
+
+  // Page header
+  const h1 = document.querySelector('.page-header h1');
+  if (h1) h1.textContent = 'Book at ' + data.name;
+  const headerP = document.querySelector('.page-header p');
+  if (headerP) headerP.textContent = 'Browse services and pricing for our ' + data.short + ' studio. Toggle locations to compare.';
+
+  // Location context bar
+  const ctxStrong = document.querySelector('.location-context strong');
+  if (ctxStrong) ctxStrong.textContent = data.name;
+  const ctx = document.querySelector('.location-context');
+  if (ctx) {
+    ctx.innerHTML = '<span>📍</span> Showing services and pricing for <strong>' + data.name + '</strong> · ' + data.address + ' <a href="index.html#locations" class="change">Change location</a>';
+  }
+
+  // Service prices
+  document.querySelectorAll('.service-list-item').forEach(item => {
+    const name = item.querySelector('h4')?.textContent.trim();
+    const priceEl = item.querySelector('.price');
+    if (name && priceEl && data.services[name]) {
+      priceEl.textContent = data.services[name];
+    }
+  });
+}
+
+document.querySelectorAll('.nav-location-btn').forEach(btn => {
+  btn.addEventListener('click', () => switchLocation(btn.textContent.trim()));
+});
+</script>
+</body>
+</html>

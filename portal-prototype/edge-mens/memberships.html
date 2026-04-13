@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memberships | Edge Men's</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    :root {
+      --brand-primary: #1a1a2e;
+      --brand-primary-hover: #16162a;
+      --brand-dark: #0f0f1a;
+      --brand-light: #f2f2f5;
+      --brand-accent: #c9a96e;
+      --brand-rose: #d4cfc8;
+      --text-primary: #1a1a2e;
+      --text-secondary: #4a4a5e;
+      --text-light: #8a8a9e;
+      --border: #d8d8e0;
+    }
+    .membership-faq { max-width: 720px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-item h4 { font-size: 16px; font-weight: 600; margin-bottom: 8px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-item p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+    .comparison-note { text-align: center; font-size: 13px; color: var(--text-light); margin-top: 32px; }
+    .brand-notice { background: var(--brand-dark); color: rgba(255,255,255,0.6); text-align: center; padding: 10px 40px; font-size: 13px; }
+    .brand-notice a { color: var(--brand-accent); text-decoration: underline; text-underline-offset: 2px; }
+    .nav-cta { background: var(--brand-primary) !important; }
+    .nav-cta:hover { background: var(--brand-primary-hover) !important; }
+    .btn-primary { background: var(--brand-primary); }
+    .btn-primary:hover { background: var(--brand-primary-hover); }
+    .multi-loc-note { background: var(--brand-light); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; font-size: 13px; color: var(--text-secondary); max-width: 600px; margin: -24px auto 48px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px; }
+    .multi-loc-note strong { color: var(--brand-primary); }
+  </style>
+</head>
+<body>
+
+  <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
+    <a href="index.html" class="nav-logo" style="color:white">Edge Men's</a>
+    <div class="nav-links">
+      <div class="nav-location-toggle" style="background:rgba(255,255,255,0.1)">
+        <button class="nav-location-btn active" style="background:rgba(255,255,255,0.15);color:white">SLC</button>
+        <button class="nav-location-btn" style="color:rgba(255,255,255,0.5)">Lehi</button>
+      </div>
+      <a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a>
+      <a href="memberships.html" class="active" style="color:white">Memberships</a>
+      <a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a>
+      <a href="book.html" class="nav-cta" style="background:var(--brand-accent)">Book Now</a>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="index.html">Edge Men's</a>
+    <span class="sep">/</span>
+    <span>Memberships</span>
+  <div class="page-header">
+    <h1>Membership Plans</h1>
+    <p>Invest in yourself. Monthly plans built for men — straightforward pricing, no fluff, real results.</p>
+  <section>
+    <div class="multi-loc-note">
+      <span>📍</span>
+      All memberships valid at <strong>both Edge Men's locations</strong> — SLC and Lehi. Not valid at Edge Women's.
+    </div>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Maintain</h3>
+        <div class="price-amount">$129</div>
+        <div class="price-period">per month</div>
+        <div class="perks">
+          <div class="perk"><span class="perk-check">&#10003;</span>20 units Botox per month</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>10% off all services</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>10% off retail products</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>Book at SLC or Lehi</div>
+        </div>
+        <a href="memberships-signup.html#maintain" class="btn-secondary btn-block" style="text-align:center">Choose Maintain</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <h3>Edge</h3>
+        <div class="price-amount">$249</div>
+        <div class="price-period">per month</div>
+        <div class="perks">
+          <div class="perk"><span class="perk-check">&#10003;</span>30 units Botox per month</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>1 PRP hair session per quarter</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>15% off all services</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>15% off retail products</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>Priority booking both locations</div>
+        </div>
+        <a href="memberships-signup.html#edge" class="btn-primary btn-block" style="text-align:center">Choose Edge</a>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Apex</h3>
+        <div class="price-amount">$399</div>
+        <div class="price-period">per month</div>
+        <div class="perks">
+          <div class="perk"><span class="perk-check">&#10003;</span>40 units Botox per month</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>1 PRP hair session per month</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>1 syringe jawline filler per quarter</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>20% off all services</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>Same-day booking priority</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>Complimentary laser session monthly</div>
+        </div>
+        <a href="memberships-signup.html#apex" class="btn-secondary btn-block" style="text-align:center">Choose Apex</a>
+      </div>
+    </div>
+    <div class="comparison-note">All memberships are month-to-month. Redeem at SLC or Lehi. Cancel anytime.</div>
+  </section>
+
+  <section style="background:var(--bg-warm)">
+    <div class="section-header">
+      <div class="section-label">How It Works</div>
+      <div class="section-title">Simple and straightforward</div>
+    </div>
+    <div class="grid-3 max-w">
+      <div style="text-align:center"><div style="font-size:36px;margin-bottom:16px">1</div><h3 style="font-family:var(--serif);font-size:20px;margin-bottom:8px">Pick Your Plan</h3><p style="font-size:14px;color:var(--text-secondary)">Choose the tier that fits. Upgrade or downgrade anytime — no contracts.</p></div>
+      <div style="text-align:center"><div style="font-size:36px;margin-bottom:16px">2</div><h3 style="font-family:var(--serif);font-size:20px;margin-bottom:8px">Book & Redeem</h3><p style="font-size:14px;color:var(--text-secondary)">Use credits at either location. Unused credits roll over for 3 months.</p></div>
+      <div style="text-align:center"><div style="font-size:36px;margin-bottom:16px">3</div><h3 style="font-family:var(--serif);font-size:20px;margin-bottom:8px">Save Every Visit</h3><p style="font-size:14px;color:var(--text-secondary)">Member pricing on everything. The more consistent you are, the better the results — and the savings.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-title">Frequently Asked Questions</div></div>
+    <div class="membership-faq">
+      <div class="faq-item"><h4>Can I use my membership at both locations? <span style="color:var(--text-light)">+</span></h4><p>Yes. All Edge Men's membership credits and discounts work at both SLC and Lehi. Not valid at Edge Women's.</p></div>
+      <div class="faq-item"><h4>Can I cancel anytime? <span style="color:var(--text-light)">+</span></h4><p>Yes. Month-to-month, no contracts. Cancel online or at either location.</p></div>
+      <div class="faq-item"><h4>Do unused credits roll over? <span style="color:var(--text-light)">+</span></h4><p>Yes, up to 3 months. After that they expire. Discount perks stay active as long as your membership is.</p></div>
+      <div class="faq-item"><h4>Can I upgrade or downgrade? <span style="color:var(--text-light)">+</span></h4><p>Anytime. Changes take effect next billing cycle. Credits transfer with you.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div><div class="footer-brand">Edge Men's</div><div class="footer-address">SLC &middot; Lehi<br>Part of Edge Aesthetics</div></div>
+      <div class="footer-links"><a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a><a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a><a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a><a href="../edge-womens/index.html">Edge Women's</a></div>
+    </div>
+    <div class="footer-bottom"><a href="../index.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;text-underline-offset:2px">← All Portals</a> · Powered by Podium &middot; &copy; 2026 Edge Aesthetics.</div>
+  </footer>
+
+</body>
+</html>
