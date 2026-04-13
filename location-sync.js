@@ -46,11 +46,24 @@
     }
   }
 
-  // On nav button click: save to localStorage
+  // On nav button click: save to localStorage + update gift card dropdown
   document.querySelectorAll('.nav-location-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const label = btn.textContent.trim();
       localStorage.setItem(brandKey, label);
+
+      // If gift card dropdown exists, update it
+      const gcDropdown = document.getElementById('gc-location');
+      if (gcDropdown) {
+        const fullName = map[label] || label;
+        for (let i = 0; i < gcDropdown.options.length; i++) {
+          if (gcDropdown.options[i].value === fullName) {
+            gcDropdown.selectedIndex = i;
+            gcDropdown.dispatchEvent(new Event('change'));
+            break;
+          }
+        }
+      }
     });
   });
 })();

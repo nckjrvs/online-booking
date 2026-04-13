@@ -220,7 +220,7 @@ customInput.addEventListener('input', () => {
 
 // Location dropdown → sidebar + purchase link update
 const locationSelect = document.getElementById('gc-location');
-const redeemValue = document.querySelectorAll('.sidebar-row')[1].querySelector('.value');
+const redeemValue = Array.from(document.querySelectorAll('.sidebar-row')).find(r => r.querySelector('.label')?.textContent.includes('Redeemable'))?.querySelector('.value');
 const purchaseBtn = document.getElementById('gc-purchase-btn');
 
 locationSelect.addEventListener('change', () => {

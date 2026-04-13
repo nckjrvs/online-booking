@@ -11,17 +11,17 @@
     :root {
       --brand-primary: #77412c;
       --brand-primary-hover: #643625;
-      --brand-dark: #141a36;
-      --brand-light: #f6f2f0;
-      --brand-accent: #c9a96e;
+      --brand-dark: #657271;
+      --brand-light: #fbf6f0;
+      --brand-accent: #77412c;
       --brand-rose: #d4c0b4;
-      --text-primary: #141a36;
-      --text-secondary: #4a4458;
-      --text-light: #8a8498;
-      --border: #dcd6d2;
+      --text-primary: #121212;
+      --text-secondary: #4a4a4a;
+      --text-light: #a0a09a;
+      --border: #e0dbd5;
     }
     .gc-preview {
-      background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-dark) 100%);
+      background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-primary) 100%);
       border-radius: var(--radius-xl);
       padding: 40px;
       color: white;
@@ -219,7 +219,7 @@ customInput.addEventListener('input', () => {
 
 // Location dropdown → sidebar + purchase link update
 const locationSelect = document.getElementById('gc-location');
-const redeemValue = document.querySelectorAll('.sidebar-row')[1].querySelector('.value');
+const redeemValue = Array.from(document.querySelectorAll('.sidebar-row')).find(r => r.querySelector('.label')?.textContent.includes('Redeemable'))?.querySelector('.value');
 const purchaseBtn = document.getElementById('gc-purchase-btn');
 
 locationSelect.addEventListener('change', () => {
