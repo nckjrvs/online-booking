@@ -210,6 +210,30 @@
       color: #8a8a9e;
       border-top: 1px solid #e8e8ee;
     }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .sitemap-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      header { padding: 40px 20px 0; }
+      header h1 { font-size: 32px; }
+      header p { font-size: 14px; }
+      .grid { gap: 16px; padding: 0 20px; margin: 32px auto 48px; }
+      .portal-card-body { padding: 20px; }
+      .portal-card-body h2 { font-size: 22px; }
+      .portal-card-footer { padding: 16px 20px; }
+      .portal-card-hero { height: 160px; }
+      .sitemap-section { padding: 0 20px; }
+      footer { padding: 24px 20px; }
+    }
+    @media (max-width: 480px) {
+      .grid { grid-template-columns: 1fr; }
+      .sitemap-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 26px; }
+      .portal-card-hero { height: 140px; }
+    }
   </style>
 </head>
 <body>
