@@ -9,28 +9,29 @@
   <link rel="stylesheet" href="../styles.css">
   <style>
     :root {
-      --brand-primary: #6b3a5e;
-      --brand-primary-hover: #5a3050;
-      --brand-dark: #2e1a28;
-      --brand-light: #f8f2f6;
+      --brand-primary: #1a1a1e;
+      --brand-primary-hover: #111114;
+      --brand-dark: #0f0f12;
+      --brand-light: #f7f3ec;
       --brand-accent: #c9a96e;
-      --brand-rose: #e0c8d8;
-      --text-primary: #2e1a28;
-      --text-secondary: #5e4a58;
-      --text-light: #9e8a98;
-      --border: #e0d4dc;
+      --brand-rose: #e6ddd0;
+      --text-primary: #0f0f12;
+      --text-secondary: #5a5a62;
+      --text-light: #9a9a9e;
+      --border: #e2ddd6;
     }
     .membership-faq { max-width: 720px; margin: 0 auto; }
     .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
     .faq-item h4 { font-size: 16px; font-weight: 600; margin-bottom: 8px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
     .faq-item p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
     .comparison-note { text-align: center; font-size: 13px; color: var(--text-light); margin-top: 32px; }
+    .nav-hamburger span { background: var(--text-primary) !important; }
     .brand-notice { background: var(--brand-dark); color: rgba(255,255,255,0.6); text-align: center; padding: 10px 40px; font-size: 13px; }
     .brand-notice a { color: var(--brand-accent); text-decoration: underline; text-underline-offset: 2px; }
     .nav-cta { background: var(--brand-primary) !important; }
     .nav-cta:hover { background: var(--brand-primary-hover) !important; }
-    .btn-primary { background: var(--brand-primary); }
-    .btn-primary:hover { background: var(--brand-primary-hover); }
+    .btn-primary { background: var(--brand-accent); color: white; }
+    .btn-primary:hover { background: #b8966c; }
     .brand-scope-note { background: var(--brand-light); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; font-size: 13px; color: var(--text-secondary); max-width: 600px; margin: -24px auto 48px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px; }
     .brand-scope-note strong { color: var(--brand-primary); }
   </style>
@@ -39,14 +40,15 @@
 
   </div>
 
-  <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
-    <a href="index.html" class="nav-logo" style="color:white">Edge Women's</a>
+  <nav style="background:var(--brand-light);border-bottom:1px solid var(--border)">
+    <a href="index.html" class="nav-logo" style="color:var(--brand-accent);font-weight:700">Edge Women's</a>
     <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="nav-links">
-      <a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a>
-      <a href="memberships.html" class="active" style="color:white">Memberships</a>
-      <a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a>
-      <a href="book.html" class="nav-cta">Book Now</a>
+      <a href="book.html" style="color:var(--text-primary)">Services</a>
+      <a href="packages.html" style="color:var(--text-primary)">Packages</a>
+      <a href="memberships.html" class="active" style="color:var(--brand-accent)">Memberships</a>
+      <a href="gift-cards.html" style="color:var(--text-primary)">Gift Cards</a>
+      <a href="book.html" class="nav-cta" style="background:var(--brand-accent);color:white">Book Now</a>
     </div>
   </nav>
 
@@ -134,7 +136,7 @@
   <footer>
     <div class="footer-content">
       <div><div class="footer-brand">Edge Women's</div><div class="footer-address">Lehi, UT<br>Part of Edge Aesthetics</div></div>
-      <div class="footer-links"><a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a><a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a><a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a><a href="../edge-mens/index.html">Edge Men's</a></div>
+      <div class="footer-links"><a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a><a href="packages.html" style="color:rgba(255,255,255,0.7)">Packages</a><a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a><a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a><a href="../edge-mens/index.html">Edge Men's</a></div>
     </div>
     <div class="footer-bottom"><a href="../index.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;text-underline-offset:2px">← All Portals</a> · Powered by Podium &middot; &copy; 2026 Edge Aesthetics.</div>
   </footer>

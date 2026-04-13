@@ -1109,6 +1109,21 @@ footer {
     max-width: 100% !important;
   }
 
+  /* ── Package Cards → Stack ── */
+  .package-card {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .package-image {
+    height: 120px !important;
+  }
+  .package-pricing {
+    text-align: left !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
   /* ── Footer ── */
   .footer-content {
     flex-direction: column !important;

@@ -9,16 +9,16 @@
   <link rel="stylesheet" href="../styles.css">
   <style>
     :root {
-      --brand-primary: #6b3a5e;
-      --brand-primary-hover: #5a3050;
-      --brand-dark: #2e1a28;
-      --brand-light: #f8f2f6;
+      --brand-primary: #1a1a1e;
+      --brand-primary-hover: #111114;
+      --brand-dark: #0f0f12;
+      --brand-light: #f7f3ec;
       --brand-accent: #c9a96e;
-      --brand-rose: #e0c8d8;
-      --text-primary: #2e1a28;
-      --text-secondary: #5e4a58;
-      --text-light: #9e8a98;
-      --border: #e0d4dc;
+      --brand-rose: #e6ddd0;
+      --text-primary: #0f0f12;
+      --text-secondary: #5a5a62;
+      --text-light: #9a9a9e;
+      --border: #e2ddd6;
     }
     .hero {
       display: grid;
@@ -51,16 +51,17 @@
     .hero h1 { font-family: var(--serif); font-size: 52px; font-weight: 500; line-height: 1.1; color: var(--brand-dark); margin-bottom: 20px; letter-spacing: -0.02em; }
     .hero p { font-size: 16px; line-height: 1.6; color: var(--text-secondary); max-width: 440px; margin-bottom: 32px; }
     .hero-actions { display: flex; gap: 12px; justify-content: center; }
-    .hero-image { background: url('../images/hero-edge-womens.jpg') center/cover no-repeat; border-radius: 16px; height: 450px; }
+    .hero-image { background: url('https://images.unsplash.com/photo-1523459178261-028135da2714?q=80&w=1466&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat; border-radius: 16px; height: 450px; }
 
     .hero-stats { display: flex; gap: 40px; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); justify-content: center; }
     .hero-stat-value { font-family: var(--serif); font-size: 28px; font-weight: 600; color: var(--brand-dark); }
     .hero-stat-label { font-size: 12px; color: var(--text-light); margin-top: 2px; }
 
+    .nav-hamburger span { background: var(--text-primary) !important; }
     .nav-cta { background: var(--brand-primary) !important; }
     .nav-cta:hover { background: var(--brand-primary-hover) !important; }
-    .btn-primary { background: var(--brand-primary); }
-    .btn-primary:hover { background: var(--brand-primary-hover); }
+    .btn-primary { background: var(--brand-accent); color: white; }
+    .btn-primary:hover { background: #b8966c; }
 
     .brand-notice {
       background: var(--brand-dark);
@@ -86,15 +87,16 @@
   <!-- Brand notice — no cross-brand visibility -->
   </div>
 
-  <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
-    <a href="index.html" class="nav-logo" style="color:white">Edge Women's</a>
+  <nav style="background:var(--brand-light);border-bottom:1px solid var(--border)">
+    <a href="index.html" class="nav-logo" style="color:var(--brand-accent);font-weight:700">Edge Women's</a>
     <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="nav-links">
       <!-- No location toggle — Lehi only -->
-      <a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a>
-      <a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a>
-      <a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a>
-      <a href="book.html" class="nav-cta">Book Now</a>
+      <a href="book.html" style="color:var(--text-primary)">Services</a>
+      <a href="packages.html" style="color:var(--text-primary)">Packages</a>
+      <a href="memberships.html" style="color:var(--text-primary)">Memberships</a>
+      <a href="gift-cards.html" style="color:var(--text-primary)">Gift Cards</a>
+      <a href="book.html" class="nav-cta" style="background:var(--brand-accent);color:white">Book Now</a>
     </div>
   </nav>
 
@@ -142,6 +144,21 @@
     </div>
   </section>
 
+  <!-- Packages -->
+  <section id="packages">
+    <div class="section-header">
+      <div class="section-label">Packages</div>
+      <div class="section-title">Bundle and save</div>
+      <div class="section-subtitle">Curated treatment combinations at exclusive pricing</div>
+    </div>
+    <div style="max-width:1024px;margin:0 auto">
+      <a href="packages-detail.html" class="package-card" style="text-decoration:none;color:inherit"><div class="package-image">&#10024;</div><div class="package-info"><h3>Bridal Glow</h3><p>HydraFacial + Botox + LED + Dermaplaning in one luxurious session.</p><div class="package-tags"><span class="package-tag">4 treatments</span><span class="package-tag">~2 hours</span><span class="package-tag">Most popular</span></div></div><div class="package-pricing"><div class="original">$614</div><div class="sale">$499</div><div class="savings">Save $115</div></div></a>
+      <a href="packages-detail.html" class="package-card" style="text-decoration:none;color:inherit"><div class="package-image">&#9200;</div><div class="package-info"><h3>Anti-Aging Essentials</h3><p>Botox + Chemical Peel + Microneedling for comprehensive rejuvenation.</p><div class="package-tags"><span class="package-tag">3 treatments</span><span class="package-tag">~2 hours</span></div></div><div class="package-pricing"><div class="original">$885</div><div class="sale">$699</div><div class="savings">Save $186</div></div></a>
+      <a href="packages-detail.html" class="package-card" style="text-decoration:none;color:inherit"><div class="package-image">&#127774;</div><div class="package-info"><h3>Summer Ready</h3><p>IPL Photofacial + HydraFacial + Dermaplaning for sun-kissed, even-toned skin.</p><div class="package-tags"><span class="package-tag">3 treatments</span><span class="package-tag">~1 hr 45 min</span></div></div><div class="package-pricing"><div class="original">$674</div><div class="sale">$549</div><div class="savings">Save $125</div></div></a>
+      <div style="text-align:center;margin-top:32px"><a href="packages.html" class="btn-secondary">View All Packages &rarr;</a></div>
+    </div>
+  </section>
+
   <section id="reviews">
     <div class="section-header">
       <div class="section-label">Client Reviews</div>
@@ -160,7 +177,8 @@
       <div class="section-title" style="color:white">Gift, save, and commit</div>
       <div class="section-subtitle">Gift cards and memberships for Edge Women's</div>
     </div>
-    <div class="store-grid" style="grid-template-columns:repeat(2,1fr);max-width:760px">
+    <div class="store-grid" style="max-width:1024px">
+      <a href="packages.html" class="store-card"><div class="store-card-icon">&#10024;</div><h3>Packages</h3><p>Bundle your favorite treatments and save. Curated combinations at exclusive pricing.</p><div class="store-card-link" style="color:var(--brand-rose)">Browse packages &rarr;</div></a>
       <a href="gift-cards.html" class="store-card"><div class="store-card-icon">🎁</div><h3>Gift Cards</h3><p>Digital gift cards for Edge Women's.</p><div class="store-card-link" style="color:var(--brand-rose)">Purchase &rarr;</div></a>
       <a href="memberships.html" class="store-card"><div class="store-card-icon">💎</div><h3>Memberships</h3><p>Monthly plans with exclusive member pricing.</p><div class="store-card-link" style="color:var(--brand-rose)">View plans &rarr;</div></a>
     </div>
@@ -183,7 +201,7 @@
   <footer>
     <div class="footer-content">
       <div><div class="footer-brand">Edge Women's</div><div class="footer-address">Lehi, UT<br>Part of Edge Aesthetics</div></div>
-      <div class="footer-links"><a href="index.html#services" style="color:rgba(255,255,255,0.7)">Services</a><a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a><a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a><a href="../edge-mens/index.html">Edge Men's</a></div>
+      <div class="footer-links"><a href="index.html#services" style="color:rgba(255,255,255,0.7)">Services</a><a href="packages.html" style="color:rgba(255,255,255,0.7)">Packages</a><a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a><a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a><a href="../edge-mens/index.html">Edge Men's</a></div>
     </div>
     <div class="footer-bottom"><a href="../index.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;text-underline-offset:2px">← All Portals</a> · Powered by Podium &middot; &copy; 2026 Edge Aesthetics.</div>
   </footer>

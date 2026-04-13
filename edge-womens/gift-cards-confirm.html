@@ -8,7 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
   <style>
-    :root { --brand-primary: #6b3a5e; --brand-primary-hover: #5a3050; --brand-dark: #2e1a28; --brand-light: #f8f2f6; --brand-accent: #c9a96e; --brand-rose: #e0c8d8; --text-primary: #2e1a28; --text-secondary: #5e4a58; --text-light: #9e8a98; --border: #e0d4dc; }
+    :root { --brand-primary: #1a1a1e; --brand-primary-hover: #111114; --brand-dark: #0f0f12; --brand-light: #f7f3ec; --brand-accent: #c9a96e; --brand-rose: #e6ddd0; --text-primary: #0f0f12; --text-secondary: #5a5a62; --text-light: #9a9a9e; --border: #e2ddd6; }
+    .nav-hamburger span { background: var(--text-primary) !important; }
+    .btn-primary { background: var(--brand-accent); color: white; }
+    .btn-primary:hover { background: #b8966c; }
     .confirm-card { max-width: 560px; margin: -40px auto 0; background: var(--bg-white); border-radius: var(--radius-xl); border: 1px solid var(--border); padding: 36px; position: relative; z-index: 1; }
     .confirm-card-section { padding: 20px 0; border-bottom: 1px solid var(--border); }
     .confirm-card-section:last-child { border-bottom: none; }
@@ -24,14 +27,15 @@
   </style>
 </head>
 <body>
-  <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
-    <a href="index.html" class="nav-logo" style="color:white">Edge Women's</a>
+  <nav style="background:var(--brand-light);border-bottom:1px solid var(--border)">
+    <a href="index.html" class="nav-logo" style="color:var(--brand-accent);font-weight:700">Edge Women's</a>
     <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="nav-links">
-      <a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a>
-      <a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a>
-      <a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a>
-      <a href="book.html" class="nav-cta">Book Now</a>
+      <a href="book.html" style="color:var(--text-primary)">Services</a>
+      <a href="packages.html" style="color:var(--text-primary)">Packages</a>
+      <a href="memberships.html" style="color:var(--text-primary)">Memberships</a>
+      <a href="gift-cards.html" style="color:var(--text-primary)">Gift Cards</a>
+      <a href="book.html" class="nav-cta" style="background:var(--brand-accent);color:white">Book Now</a>
     </div>
   </nav>
   <div class="confirm-hero"><div class="confirm-check">&#10003;</div><h1>Gift card sent!</h1><p>A $100 gift card has been delivered to rachel@email.com</p></div>
@@ -64,7 +68,7 @@
     </div>
   </section>
   <footer>
-    <div class="footer-content"><div><div class="footer-brand">Edge Women's</div><div class="footer-address">Lehi, UT</div></div><div class="footer-links"><a href="index.html#services">Services</a><a href="gift-cards.html">Gift Cards</a><a href="memberships.html">Memberships</a></div></div>
+    <div class="footer-content"><div><div class="footer-brand">Edge Women's</div><div class="footer-address">Lehi, UT</div></div><div class="footer-links"><a href="index.html#services">Services</a><a href="packages.html">Packages</a><a href="gift-cards.html">Gift Cards</a><a href="memberships.html">Memberships</a></div></div>
     <div class="footer-bottom"><a href="../index.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;text-underline-offset:2px">← All Portals</a> · Powered by Podium &middot; &copy; 2026 Edge Aesthetics.</div>
   </footer>
 <script src="../mobile-nav.js"></script>
