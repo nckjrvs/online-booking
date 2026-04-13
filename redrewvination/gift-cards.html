@@ -3,11 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gift Cards | Let's Glow Girls</title>
+  <title>Gift Cards | ReDrewvination</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
   <style>
+    :root {
+      --brand-primary: #466EFF;
+      --brand-primary-hover: #1E47F6;
+      --brand-dark: #12151A;
+      --brand-light: #EDF1F5;
+      --brand-accent: #466EFF;
+      --brand-rose: #E4EAF0;
+      --text-primary: #12151A;
+      --text-secondary: #555C67;
+      --text-light: #788290;
+      --border: #DCE2EA;
+      --serif: "Inter", "Graphik", Helvetica, sans-serif;
+    }
     .gc-preview {
       background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-dark) 100%);
       border-radius: var(--radius-xl);
@@ -30,59 +43,52 @@
       height: 200%;
       background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
     }
-    .gc-preview-brand {
-      font-family: var(--serif);
-      font-size: 24px;
-      font-weight: 500;
-      position: relative;
-    }
-    .gc-preview-amount {
-      font-family: var(--serif);
-      font-size: 56px;
-      font-weight: 600;
-      position: relative;
-    }
-    .gc-preview-footer {
-      display: flex;
-      justify-content: space-between;
-      font-size: 13px;
-      opacity: 0.7;
-      position: relative;
-    }
-    .gc-message-preview {
-      background: var(--brand-light);
-      border-radius: var(--radius-md);
-      padding: 16px;
-      margin-top: 16px;
-      font-size: 14px;
-      color: var(--text-secondary);
-      font-style: italic;
-      min-height: 60px;
-    }
+    .gc-preview-brand { font-family: var(--serif); font-size: 24px; font-weight: 500; position: relative; }
+    .gc-preview-amount { font-family: var(--serif); font-size: 56px; font-weight: 600; position: relative; }
+    .gc-preview-footer { display: flex; justify-content: space-between; font-size: 13px; opacity: 0.7; position: relative; }
+    .gc-message-preview { background: var(--brand-light); border-radius: var(--radius-md); padding: 16px; margin-top: 16px; font-size: 14px; color: var(--text-secondary); font-style: italic; min-height: 60px; }
+    .gc-redeem-note { background: var(--brand-light); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px 18px; font-size: 13px; color: var(--text-secondary); margin-bottom: 32px; display: flex; align-items: center; gap: 10px; }
+    .gc-redeem-note strong { color: var(--brand-primary); }
   </style>
 </head>
 <body>
 
   <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
-    <a href="lets-glow-girls.html" class="nav-logo" style="color:white">Let's Glow Girls</a>
+    <a href="index.html" class="nav-logo" style="color:white">ReDrewvination</a>
     <div class="nav-links">
+      <div class="nav-location-toggle" style="background:rgba(255,255,255,0.1)">
+        <button class="nav-location-btn active" style="background:rgba(255,255,255,0.15);color:white">Downtown</button>
+        <button class="nav-location-btn" style="color:rgba(255,255,255,0.5)">Midtown</button>
+        <button class="nav-location-btn" style="color:rgba(255,255,255,0.5)">Uptown</button>
+      </div>
       <a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a>
       <a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a>
       <a href="gift-cards.html" class="active" style="color:white">Gift Cards</a>
-      <a href="book.html" class="nav-cta" style="background:var(--brand-accent)">Book Now</a>
+      <a href="book.html" class="nav-cta">Book Now</a>
     </div>
   </nav>
 
   <div class="page-header">
-    <h1>Give the Gift of Glow</h1>
-    <p>Digital gift cards delivered instantly via email. Redeemable for any service or product in-studio.</p>
+    <h1>Give the Gift of ReDrewvination</h1>
+    <p>Digital gift cards delivered instantly via email. Redeemable at any ReDrewvination location — Downtown, Midtown, or Uptown.</p>
   </div>
 
   <section>
     <div class="layout-sidebar">
       <div>
+        <!-- Location Selection -->
+        <div style="margin-bottom:40px">
+          <label class="form-label" style="font-size:15px;margin-bottom:12px">Redeemable Location</label>
+          <select id="gc-location" class="form-input" style="appearance:none;cursor:pointer;padding-right:40px;background-image:url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%228%22 viewBox=%220 0 12 8%22%3E%3Cpath d=%22M1 1l5 5 5-5%22 stroke=%22%234a4458%22 stroke-width=%221.5%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E');background-repeat:no-repeat;background-position:right 16px center">
+            <option value="All Locations" selected>All Locations</option>
+            <option value="Downtown">Downtown</option>
+            <option value="Midtown">Midtown</option>
+            <option value="Uptown">Uptown</option>
+          </select>
+        </div>
+
         <!-- Amount -->
-        <div class="step-section" style="margin-bottom:40px">
+        <div style="margin-bottom:40px">
           <label class="form-label" style="font-size:15px;margin-bottom:12px">Choose an Amount</label>
           <div class="amount-grid">
             <div class="amount-btn">$50</div>
@@ -107,7 +113,7 @@
             <div class="form-group" style="margin-bottom:0"><input type="email" class="form-input" placeholder="Recipient's email"></div>
           </div>
           <div class="form-group">
-            <textarea class="form-input" placeholder="Add a personal message (optional)" rows="3">Happy Birthday! Treat yourself to something special 💛</textarea>
+            <textarea class="form-input" placeholder="Add a personal message (optional)" rows="3">You deserve this! Pick any ReDrewvination location and treat yourself 🌿</textarea>
           </div>
           <div class="form-group">
             <label class="form-label">Delivery Date</label>
@@ -135,22 +141,23 @@
       <div>
         <div class="sidebar-card" style="padding:0;overflow:hidden;border:none">
           <div class="gc-preview">
-            <div class="gc-preview-brand">Let's Glow Girls</div>
+            <div class="gc-preview-brand">ReDrewvination</div>
             <div class="gc-preview-amount">$100</div>
             <div class="gc-preview-footer">
               <span>Gift Card</span>
-              <span>book.podium.com/lets-glow-girls</span>
+              <span>portal.podium.com/redrewvination</span>
             </div>
           </div>
           <div style="padding:0 4px">
             <div class="gc-message-preview">
-              "Happy Birthday! Treat yourself to something special 💛"
+              "You deserve this! Pick any ReDrewvination location and treat yourself 🌿"
             </div>
             <div style="padding:20px 0">
               <div class="sidebar-row"><span class="label">Gift card amount</span><span class="value">$100.00</span></div>
+              <div class="sidebar-row"><span class="label">Redeemable at</span><span class="value">All locations</span></div>
               <div class="sidebar-total"><span>Total</span><span>$100.00</span></div>
               <div class="mt-24">
-                <a href="gift-cards-confirm.html" class="btn-primary btn-block" style="text-align:center">Purchase Gift Card</a>
+                <a href="gift-cards-confirm.html" id="gc-purchase-btn" class="btn-primary btn-block" style="text-align:center">Purchase Gift Card</a>
               </div>
               <p style="font-size:12px;color:var(--text-light);text-align:center;margin-top:12px">Secure checkout powered by Podium Payments</p>
             </div>
@@ -162,13 +169,24 @@
 
   <footer>
     <div class="footer-content">
-      <div><div class="footer-brand">Let's Glow Girls</div><div class="footer-address">2847 Highland Drive, Suite 200<br>Salt Lake City, UT 84106</div></div>
+      <div><div class="footer-brand">ReDrewvination</div><div class="footer-address">Downtown &middot; Midtown &middot; Uptown</div></div>
       <div class="footer-links"><a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a><a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a><a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a></div>
     </div>
-    <div class="footer-bottom"><a href="index.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;text-underline-offset:2px">← All Portals</a> · Powered by Podium &middot; &copy; 2026 Let's Glow Girls.</div>
+    <div class="footer-bottom"><a href="../index.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;text-underline-offset:2px">← All Portals</a> · Powered by Podium &middot; &copy; 2026 ReDrewvination.</div>
   </footer>
 
 <script>
+const names = { Downtown: 'Downtown', Midtown: 'Midtown', Uptown: 'Uptown' };
+document.querySelectorAll('.nav-location-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.nav-location-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const loc = btn.textContent.trim();
+    const banner = document.querySelector('.location-banner strong');
+    if (banner) banner.textContent = names[loc] || loc;
+  });
+});
+
 const amountBtns = document.querySelectorAll('.amount-btn');
 const customInput = document.querySelector('.form-input[placeholder*="custom amount"]');
 const previewAmount = document.querySelector('.gc-preview-amount');
@@ -198,6 +216,17 @@ customInput.addEventListener('input', () => {
     amountBtns.forEach(b => b.classList.remove('active'));
     setAmount('$' + val);
   }
+});
+
+// Location dropdown → sidebar + purchase link update
+const locationSelect = document.getElementById('gc-location');
+const redeemValue = document.querySelectorAll('.sidebar-row')[1].querySelector('.value');
+const purchaseBtn = document.getElementById('gc-purchase-btn');
+
+locationSelect.addEventListener('change', () => {
+  const loc = locationSelect.value;
+  redeemValue.textContent = loc;
+  purchaseBtn.href = 'gift-cards-confirm.html?location=' + encodeURIComponent(loc);
 });
 
 // Delivery date toggle

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memberships | ReDrewvination</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    :root {
+      --brand-primary: #466EFF;
+      --brand-primary-hover: #1E47F6;
+      --brand-dark: #12151A;
+      --brand-light: #EDF1F5;
+      --brand-accent: #466EFF;
+      --brand-rose: #E4EAF0;
+      --text-primary: #12151A;
+      --text-secondary: #555C67;
+      --text-light: #788290;
+      --border: #DCE2EA;
+      --serif: "Inter", "Graphik", Helvetica, sans-serif;
+    }
+    .membership-faq { max-width: 720px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-item h4 { font-size: 16px; font-weight: 600; margin-bottom: 8px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-item p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+    .comparison-note { text-align: center; font-size: 13px; color: var(--text-light); margin-top: 32px; }
+    .multi-loc-note { background: var(--brand-light); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; font-size: 13px; color: var(--text-secondary); max-width: 600px; margin: -24px auto 48px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px; }
+    .multi-loc-note strong { color: var(--brand-primary); }
+  </style>
+</head>
+<body>
+
+  <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
+    <a href="index.html" class="nav-logo" style="color:white">ReDrewvination</a>
+    <div class="nav-links">
+      <div class="nav-location-toggle" style="background:rgba(255,255,255,0.1)">
+        <button class="nav-location-btn active" style="background:rgba(255,255,255,0.15);color:white">Downtown</button>
+        <button class="nav-location-btn" style="color:rgba(255,255,255,0.5)">Midtown</button>
+        <button class="nav-location-btn" style="color:rgba(255,255,255,0.5)">Uptown</button>
+      </div>
+      <a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a>
+      <a href="memberships.html" class="active" style="color:white">Memberships</a>
+      <a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a>
+      <a href="book.html" class="nav-cta">Book Now</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Membership Plans</h1>
+    <p>Commit to your results. Monthly plans with exclusive pricing, priority booking, and cross-location flexibility.</p>
+  </div>
+
+  <section>
+    <div class="multi-loc-note">
+      <span>📍</span>
+      All memberships are valid at <strong>any ReDrewvination location</strong> — Downtown, Midtown, and Uptown. Book wherever is most convenient.
+    </div>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Essential</h3>
+        <div class="price-amount">$119</div>
+        <div class="price-period">per month</div>
+        <div class="perks">
+          <div class="perk"><span class="perk-check">&#10003;</span>1 HydraFacial per month</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>10% off all injectables</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>10% off retail products</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>Book at any location</div>
+        </div>
+        <a href="memberships-signup.html#essential" class="btn-secondary btn-block" style="text-align:center">Choose Essential</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <h3>ReDrewvination</h3>
+        <div class="price-amount">$249</div>
+        <div class="price-period">per month</div>
+        <div class="perks">
+          <div class="perk"><span class="perk-check">&#10003;</span>1 HydraFacial per month</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>24 units Botox per month</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>15% off additional services</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>15% off retail products</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>Priority booking at all locations</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>Free LED add-on ($50 value)</div>
+        </div>
+        <a href="memberships-signup.html#redrewvination" class="btn-primary btn-block" style="text-align:center">Choose ReDrewvination</a>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Pinnacle</h3>
+        <div class="price-amount">$399</div>
+        <div class="price-period">per month</div>
+        <div class="perks">
+          <div class="perk"><span class="perk-check">&#10003;</span>1 HydraFacial per month</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>40 units Botox per month</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>1 syringe filler per quarter</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>20% off all additional services</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>20% off retail products</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>Same-day booking at any location</div>
+          <div class="perk"><span class="perk-check">&#10003;</span>Complimentary dermaplaning</div>
+        </div>
+        <a href="memberships-signup.html#pinnacle" class="btn-secondary btn-block" style="text-align:center">Choose Pinnacle</a>
+      </div>
+    </div>
+    <div class="comparison-note">All memberships are month-to-month. No long-term commitment. Redeem credits at any ReDrewvination location. Cancel anytime.</div>
+  </section>
+
+  <section style="background:var(--bg-warm)">
+    <div class="section-header">
+      <div class="section-label">How It Works</div>
+      <div class="section-title">Simple and flexible</div>
+    </div>
+    <div class="grid-3 max-w">
+      <div style="text-align:center">
+        <div style="font-size:36px;margin-bottom:16px">1</div>
+        <h3 style="font-family:var(--serif);font-size:20px;margin-bottom:8px">Choose Your Plan</h3>
+        <p style="font-size:14px;color:var(--text-secondary)">Pick the tier that matches your routine. Upgrade or downgrade anytime.</p>
+      </div>
+      <div style="text-align:center">
+        <div style="font-size:36px;margin-bottom:16px">2</div>
+        <h3 style="font-family:var(--serif);font-size:20px;margin-bottom:8px">Book Anywhere</h3>
+        <p style="font-size:14px;color:var(--text-secondary)">Use credits at Downtown, Midtown, or Uptown — whichever is closest. Unused credits roll over 3 months.</p>
+      </div>
+      <div style="text-align:center">
+        <div style="font-size:36px;margin-bottom:16px">3</div>
+        <h3 style="font-family:var(--serif);font-size:20px;margin-bottom:8px">Enjoy the Perks</h3>
+        <p style="font-size:14px;color:var(--text-secondary)">Member-only pricing on every visit, at every location. The more you come in, the more you save.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <div class="section-title">Frequently Asked Questions</div>
+    </div>
+    <div class="membership-faq">
+      <div class="faq-item"><h4>Can I use my membership at any ReDrewvination location? <span style="color:var(--text-light)">+</span></h4><p>Yes. All membership credits and discounts are valid at Downtown, Midtown, and Uptown. Book wherever is most convenient for you.</p></div>
+      <div class="faq-item"><h4>Can I cancel anytime? <span style="color:var(--text-light)">+</span></h4><p>Yes. All memberships are month-to-month. Cancel online or contact any location — takes effect at end of billing cycle.</p></div>
+      <div class="faq-item"><h4>Do unused credits roll over? <span style="color:var(--text-light)">+</span></h4><p>Yes, unused service credits roll over for up to 3 months. Discount perks are always available while your membership is active.</p></div>
+      <div class="faq-item"><h4>Can I upgrade or downgrade? <span style="color:var(--text-light)">+</span></h4><p>Absolutely. Changes take effect at the start of your next billing cycle. Unused credits transfer with you.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div><div class="footer-brand">ReDrewvination</div><div class="footer-address">Downtown &middot; Midtown &middot; Uptown</div></div>
+      <div class="footer-links"><a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a><a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a><a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a></div>
+    </div>
+    <div class="footer-bottom"><a href="../index.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;text-underline-offset:2px">← All Portals</a> · Powered by Podium &middot; &copy; 2026 ReDrewvination.</div>
+  </footer>
+
+</body>
+</html>

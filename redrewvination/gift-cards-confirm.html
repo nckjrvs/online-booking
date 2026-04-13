@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Card Sent! | ReDrewvination</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    :root { --brand-primary: #466EFF; --brand-primary-hover: #1E47F6; --brand-dark: #12151A; --brand-light: #EDF1F5; --brand-accent: #466EFF; --brand-rose: #E4EAF0; --text-primary: #12151A; --text-secondary: #555C67; --text-light: #788290; --border: #DCE2EA;
+      --serif: "Inter", "Graphik", Helvetica, sans-serif; }
+    .confirm-card { max-width: 560px; margin: -40px auto 0; background: var(--bg-white); border-radius: var(--radius-xl); border: 1px solid var(--border); padding: 36px; position: relative; z-index: 1; }
+    .confirm-card-section { padding: 20px 0; border-bottom: 1px solid var(--border); }
+    .confirm-card-section:last-child { border-bottom: none; }
+    .confirm-card-section h3 { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); margin-bottom: 12px; }
+    .confirm-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; font-size: 15px; }
+    .confirm-row .label { color: var(--text-secondary); }
+    .confirm-row .value { font-weight: 500; }
+    .confirm-total-row { display: flex; justify-content: space-between; align-items: center; padding: 16px 0 0; font-size: 18px; font-weight: 600; border-top: 2px solid var(--brand-dark); margin-top: 8px; }
+    .gc-mini-preview { background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-dark) 100%); border-radius: var(--radius-md); padding: 20px; color: white; display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .gc-mini-brand { font-family: var(--serif); font-size: 16px; }
+    .gc-mini-amount { font-family: var(--serif); font-size: 28px; font-weight: 600; }
+    .message-block { background: var(--brand-light); border-radius: var(--radius-md); padding: 16px; font-size: 14px; color: var(--text-secondary); font-style: italic; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
+    <a href="index.html" class="nav-logo" style="color:white">ReDrewvination</a>
+    <div class="nav-links">
+      <a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a>
+      <a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a>
+      <a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a>
+      <a href="book.html" class="nav-cta">Book Now</a>
+    </div>
+  </nav>
+  <div class="confirm-hero"><div class="confirm-check">&#10003;</div><h1>Gift card sent!</h1><p>A $100 gift card has been delivered to sarah@email.com</p></div>
+  <section style="padding-top:0;padding-bottom:80px">
+    <div class="confirm-card">
+      <div class="confirm-card-section">
+        <div class="gc-mini-preview"><div class="gc-mini-brand">ReDrewvination</div><div class="gc-mini-amount">$100</div></div>
+        <div class="message-block">"You deserve this! Pick any ReDrewvination location and treat yourself."</div>
+      </div>
+      <div class="confirm-card-section">
+        <h3>Gift Card Details</h3>
+        <div class="confirm-row"><span class="label">Amount</span><span class="value">$100.00</span></div>
+        <div class="confirm-row"><span class="label">Sent to</span><span class="value">sarah@email.com</span></div>
+        <div class="confirm-row"><span class="label">From</span><span class="value">Michael T.</span></div>
+        <div class="confirm-row"><span class="label">Delivery</span><span class="value">Sent immediately</span></div>
+        <div class="confirm-row"><span class="label">Redeemable at</span><span class="value" id="confirm-location">All ReDrewvination locations</span></div>
+      </div>
+      <div class="confirm-card-section">
+        <h3>Payment</h3>
+        <div class="confirm-row"><span class="label">Card</span><span class="value">Visa ending in 4242</span></div>
+        <div class="confirm-total-row"><span>Total charged</span><span>$100.00</span></div>
+      </div>
+      <div class="confirm-card-section" style="border-bottom:none;padding-bottom:0">
+        <p style="font-size:13px;color:var(--text-light);line-height:1.6;margin-bottom:20px">A confirmation receipt has been sent to your email. The recipient will receive their gift card with your message and a link to book at any ReDrewvination location.</p>
+        <div style="display:flex;gap:12px">
+          <a href="index.html" class="btn-primary" style="flex:1;text-align:center">Back to Home</a>
+          <a href="gift-cards.html" class="btn-secondary" style="flex:1;text-align:center">Send Another</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-content"><div><div class="footer-brand">ReDrewvination</div><div class="footer-address">Downtown &middot; Midtown &middot; Uptown</div></div><div class="footer-links"><a href="book.html">Services</a><a href="gift-cards.html">Gift Cards</a><a href="memberships.html">Memberships</a></div></div>
+    <div class="footer-bottom"><a href="../index.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;text-underline-offset:2px">← All Portals</a> · Powered by Podium &middot; &copy; 2026 ReDrewvination.</div>
+  </footer>
+<script>
+const params = new URLSearchParams(window.location.search);
+const loc = params.get('location');
+if (loc) {
+  const el = document.getElementById('confirm-location');
+  if (el) el.textContent = loc === 'All Locations' ? 'All ReDrewvination locations' : 'ReDrewvination ' + loc + ' only';
+}
+</script>
+</body>
+</html>

@@ -52,9 +52,6 @@
 </head>
 <body>
 
-  <div style="background:var(--brand-dark);color:white;text-align:center;padding:10px 40px;font-size:13px;">
-  </div>
-
   <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
     <a href="index.html" class="nav-logo" style="color:white">Rise Rejuvenation</a>
     <div class="nav-links">
@@ -122,6 +119,9 @@
             <div class="select-group">
               <div class="select-chip active">Send now</div>
               <div class="select-chip">Schedule for later</div>
+            </div>
+            <div class="gc-date-picker" style="display:none;margin-top:12px">
+              <input type="date" class="form-input" id="gc-delivery-date" min="2026-04-14">
             </div>
           </div>
         </div>
@@ -226,6 +226,18 @@ locationSelect.addEventListener('change', () => {
   const loc = locationSelect.value;
   redeemValue.textContent = loc;
   purchaseBtn.href = 'gift-cards-confirm.html?location=' + encodeURIComponent(loc);
+});
+
+// Delivery date toggle
+document.querySelectorAll('.select-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    chip.parentElement.querySelectorAll('.select-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    const datePicker = document.querySelector('.gc-date-picker');
+    if (datePicker) {
+      datePicker.style.display = chip.textContent.trim() === 'Schedule for later' ? 'block' : 'none';
+    }
+  });
 });
 </script>
 </body>

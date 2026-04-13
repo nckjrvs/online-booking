@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReDrewvination | Med Spa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    :root {
+      --brand-primary: #466EFF;
+      --brand-primary-hover: #1E47F6;
+      --brand-dark: #12151A;
+      --brand-light: #EDF1F5;
+      --brand-accent: #466EFF;
+      --brand-rose: #E4EAF0;
+      --text-primary: #12151A;
+      --text-secondary: #555C67;
+      --text-light: #788290;
+      --border: #DCE2EA;
+      --serif: "Inter", "Graphik", Helvetica, sans-serif;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1024px;
+      margin: 0 auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 24px 32px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--brand-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+    .hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--brand-primary); }
+    .hero h1 { font-family: var(--serif); font-size: 52px; font-weight: 500; line-height: 1.1; color: var(--brand-dark); margin-bottom: 20px; letter-spacing: -0.02em; }
+    .hero p { font-size: 16px; line-height: 1.6; color: var(--text-secondary); max-width: 440px; margin-bottom: 32px; }
+    .hero-actions { display: flex; gap: 12px; justify-content: center; }
+    .hero-image { background: url('https://images.unsplash.com/photo-1552693673-1bf958298935?q=80&w=1473&auto=format&fit=crop') center/cover no-repeat; border-radius: 16px; height: 450px; }
+
+    .hero-stats { display: flex; gap: 40px; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); justify-content: center; }
+    .hero-stat-value { font-family: var(--serif); font-size: 28px; font-weight: 600; color: var(--brand-dark); }
+    .hero-stat-label { font-size: 12px; color: var(--text-light); margin-top: 2px; }
+
+    /* Location banner */
+    .location-banner {
+      background: var(--brand-dark);
+      color: white;
+      padding: 12px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+    .location-banner strong { color: var(--brand-accent); }
+    .location-banner a { color: rgba(255,255,255,0.6); text-decoration: underline; text-underline-offset: 2px; font-size: 12px; }
+
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1024px; margin: 0 auto; }
+    .review-card { background: var(--brand-light); border-radius: var(--radius-lg); padding: 28px; }
+    .review-card-stars { color: var(--brand-accent); font-size: 14px; letter-spacing: 2px; margin-bottom: 12px; }
+    .review-card p { font-size: 14px; line-height: 1.6; color: var(--text-secondary); margin-bottom: 16px; font-style: italic; }
+    .review-card-author { font-size: 13px; font-weight: 600; }
+    .review-card-date { font-size: 12px; color: var(--text-light); }
+    .review-card-location { font-size: 11px; color: var(--brand-primary); font-weight: 500; margin-top: 4px; }
+
+    .locations-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1024px; margin: 0 auto; }
+    .location-card { border: 1.5px solid var(--border); border-radius: var(--radius-xl); padding: 28px; transition: all 0.2s; }
+    .location-card:hover { border-color: var(--brand-primary); }
+    .location-card.active { border-color: var(--brand-primary); background: var(--brand-light); }
+    .location-card h3 { font-family: var(--serif); font-size: 22px; font-weight: 500; margin-bottom: 12px; }
+    .location-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 4px; }
+    .location-card .hours { font-size: 12px; color: var(--text-light); margin-top: 12px; }
+  </style>
+</head>
+<body>
+
+  <!-- Location banner -->
+  </div>
+
+  <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
+    <a href="index.html" class="nav-logo" style="color:white">ReDrewvination</a>
+    <div class="nav-links">
+      <div class="nav-location-toggle" style="background:rgba(255,255,255,0.1)">
+        <button class="nav-location-btn active" style="background:rgba(255,255,255,0.15);color:white">Downtown</button>
+        <button class="nav-location-btn" style="color:rgba(255,255,255,0.5)">Midtown</button>
+        <button class="nav-location-btn" style="color:rgba(255,255,255,0.5)">Uptown</button>
+      </div>
+      <a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a>
+      <a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a>
+      <a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a>
+      <a href="book.html" class="nav-cta">Book Now</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">3 Locations Across Utah</div>
+      <h1>Elevated aesthetics, naturally</h1>
+      <p>Medical-grade treatments from board-certified providers. Botox, fillers, laser, and more — personalized at every visit.</p>
+      <div class="hero-actions">
+        <a href="book.html" class="btn-primary">Book at Downtown</a>
+        <a href="book.html" class="btn-secondary">Browse Services</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="hero-stat-value">4.8</div><div class="hero-stat-label">Google Rating</div></div>
+        <div><div class="hero-stat-value">6,200+</div><div class="hero-stat-label">Clients Served</div></div>
+        <div><div class="hero-stat-value">3</div><div class="hero-stat-label">Locations</div></div>
+      </div>
+    </div>
+    <div class="hero-image"></div>
+  </section>
+
+  <!-- Services — same as single-loc but with per-location pricing note -->
+  <section id="services" style="background:var(--brand-light)">
+    <div class="section-header">
+      <div class="section-label">Services at Downtown</div>
+      <div class="section-title">What we offer</div>
+      <div class="section-subtitle">Pricing shown for Downtown. Toggle location to see pricing at other studios.</div>
+    </div>
+    <div class="grid-4 max-w">
+      <a href="book.html" class="card card-clickable">
+        <div class="card-body"><h3>Injectables</h3><p>Botox, Dysport, and dermal fillers</p>
+          <div class="card-meta"><span class="card-price">From $12/unit</span><span class="card-arrow">&rarr;</span></div></div>
+      </a>
+      <a href="book.html" class="card card-clickable">
+        <div class="card-body"><h3>Laser Treatments</h3><p>Hair removal, resurfacing, pigmentation</p>
+          <div class="card-meta"><span class="card-price">From $150</span><span class="card-arrow">&rarr;</span></div></div>
+      </a>
+      <a href="book.html" class="card card-clickable">
+        <div class="card-body"><h3>Medical Facials</h3><p>HydraFacial, peels, and more</p>
+          <div class="card-meta"><span class="card-price">From $175</span><span class="card-arrow">&rarr;</span></div></div>
+      </a>
+      <a href="book.html" class="card card-clickable">
+        <div class="card-body"><h3>Body Contouring</h3><p>CoolSculpting and skin tightening</p>
+          <div class="card-meta"><span class="card-price">From $600</span><span class="card-arrow">&rarr;</span></div></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Before/After -->
+
+  <!-- Reviews with location tags -->
+  <section id="reviews">
+    <div class="section-header">
+      <div class="section-label">Client Reviews</div>
+      <div class="section-title">What our clients say</div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card"><div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"The Downtown location is stunning and the staff is incredibly knowledgeable. I drive past two other med spas to come here."</p><div class="review-card-author">Megan T.</div><div class="review-card-location">ReDrewvination Downtown</div></div>
+      <div class="review-card"><div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"So happy they opened in Midtown! Same amazing quality I got at the Downtown studio, now 5 minutes from my house."</p><div class="review-card-author">Lauren B.</div><div class="review-card-location">ReDrewvination Midtown</div></div>
+      <div class="review-card"><div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"I started my membership at Uptown and love that I can book at any location. The flexibility is a huge plus."</p><div class="review-card-author">Ashley R.</div><div class="review-card-location">ReDrewvination Uptown</div></div>
+    </div>
+  </section>
+
+  <!-- Store -->
+  <section class="store-dark">
+    <div class="section-header">
+      <div class="section-label">Online Store</div>
+      <div class="section-title">Gift, save, and commit</div>
+      <div class="section-subtitle">Gift cards and memberships — redeemable at any ReDrewvination location</div>
+    </div>
+    <div class="store-grid" style="grid-template-columns:repeat(2,1fr);max-width:760px">
+      <a href="gift-cards.html" class="store-card"><div class="store-card-icon">🎁</div><h3>Gift Cards</h3><p>Digital gift cards redeemable at any ReDrewvination location.</p><div class="store-card-link">Purchase &rarr;</div></a>
+      <a href="memberships.html" class="store-card"><div class="store-card-icon">💎</div><h3>Memberships</h3><p>Monthly plans with cross-location booking flexibility.</p><div class="store-card-link">View plans &rarr;</div></a>
+    </div>
+  </section>
+
+  <!-- All Locations -->
+  <section id="locations">
+    <div class="section-header">
+      <div class="section-label">Our Locations</div>
+      <div class="section-title">Find a studio near you</div>
+    </div>
+    <div class="locations-grid">
+      <div class="location-card active">
+        <h3>Downtown</h3>
+        <p>1284 East 2100 South, Suite 100</p>
+        <p>Downtown, UT 84106</p>
+        <p>(801) 555-7473</p>
+        <div class="hours">Mon–Fri 9am–7pm &middot; Sat 9am–4pm</div>
+        <div class="mt-24"><a href="book.html" class="btn-primary btn-sm">Book at Downtown</a></div>
+      </div>
+      <div class="location-card">
+        <h3>Midtown</h3>
+        <p>562 West Center Street</p>
+        <p>Midtown, UT 84601</p>
+        <p>(801) 555-7474</p>
+        <div class="hours">Mon–Fri 9am–6pm &middot; Sat 10am–3pm</div>
+        <div class="mt-24"><a href="book.html" class="btn-primary btn-sm">Book at Midtown</a></div>
+      </div>
+      <div class="location-card">
+        <h3>Uptown</h3>
+        <p>3450 Triumph Boulevard, Suite 210</p>
+        <p>Uptown, UT 84043</p>
+        <p>(801) 555-7475</p>
+        <div class="hours">Mon–Fri 10am–6pm &middot; Sat 10am–3pm</div>
+        <div class="mt-24"><a href="book.html" class="btn-primary btn-sm">Book at Uptown</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div><div class="footer-brand">ReDrewvination</div><div class="footer-address">3 locations in Utah<br>Downtown &middot; Midtown &middot; Uptown</div></div>
+      <div class="footer-links"><a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a><a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a><a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a></div>
+    </div>
+    <div class="footer-bottom"><a href="../index.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;text-underline-offset:2px">← All Portals</a> · Powered by Podium &middot; &copy; 2026 ReDrewvination.</div>
+  </footer>
+
+<script>
+const locations = {
+  Downtown: {
+    name: 'Downtown', short: 'Downtown',
+    address: '1284 East 2100 South, Suite 100', city: 'Downtown, UT 84106', phone: '(801) 555-7473',
+    hours: 'Mon–Fri 9am–7pm · Sat 9am–4pm',
+    pricing: { injectables: 'From $12/unit', laser: 'From $150', facials: 'From $175', body: 'From $600' },
+    subtitle: 'Pricing shown for Downtown. Toggle location to see pricing at other studios.'
+  },
+  Midtown: {
+    name: 'Midtown', short: 'Midtown',
+    address: '562 West Center Street', city: 'Midtown, UT 84601', phone: '(801) 555-7474',
+    hours: 'Mon–Fri 9am–6pm · Sat 10am–3pm',
+    pricing: { injectables: 'From $11/unit', laser: 'From $135', facials: 'From $165', body: 'From $550' },
+    subtitle: 'Pricing shown for Midtown. Toggle location to see pricing at other studios.'
+  },
+  Uptown: {
+    name: 'Uptown', short: 'Uptown',
+    address: '3450 Triumph Boulevard, Suite 210', city: 'Uptown, UT 84043', phone: '(801) 555-7475',
+    hours: 'Mon–Fri 10am–6pm · Sat 10am–3pm',
+    pricing: { injectables: 'From $12/unit', laser: 'From $140', facials: 'From $170', body: 'From $575' },
+    subtitle: 'Pricing shown for Uptown. Toggle location to see pricing at other studios.'
+  }
+};
+
+function switchLocation(loc) {
+  const data = locations[loc];
+  if (!data) return;
+
+  // Toggle buttons
+  document.querySelectorAll('.nav-location-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.trim() === loc);
+  });
+
+  // Location banner
+  const banner = document.querySelector('.location-banner strong');
+  if (banner) banner.textContent = data.name;
+
+  // Hero CTA
+  const heroCta = document.querySelector('.hero-actions .btn-primary');
+  if (heroCta) heroCta.textContent = 'Book at ' + data.short;
+
+  // Services section label
+  const svcLabel = document.querySelector('#services .section-label');
+  if (svcLabel) svcLabel.textContent = 'Services at ' + data.name;
+
+  // Services subtitle
+  const svcSub = document.querySelector('#services .section-subtitle');
+  if (svcSub) svcSub.textContent = data.subtitle;
+
+  // Pricing on service cards
+  const prices = document.querySelectorAll('#services .card-price');
+  const cats = ['injectables', 'laser', 'facials', 'body'];
+  prices.forEach((el, i) => { if (cats[i]) el.textContent = data.pricing[cats[i]]; });
+
+  // Location cards — highlight active
+  document.querySelectorAll('.location-card').forEach(card => {
+    const h3 = card.querySelector('h3');
+    if (h3) {
+      const isActive = h3.textContent.trim() === data.name || h3.textContent.trim() === data.short;
+      card.classList.toggle('active', isActive);
+    }
+  });
+}
+
+// Wire up toggle buttons
+document.querySelectorAll('.nav-location-btn').forEach(btn => {
+  btn.addEventListener('click', () => switchLocation(btn.textContent.trim()));
+});
+
+// Wire up "Change location" link
+const changeLink = document.querySelector('.location-banner a');
+if (changeLink) {
+  changeLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    const current = document.querySelector('.nav-location-btn.active').textContent.trim();
+    const keys = Object.keys(locations);
+    const next = keys[(keys.indexOf(current) + 1) % keys.length];
+    switchLocation(next);
+  });
+}
+</script>
+</body>
+</html>

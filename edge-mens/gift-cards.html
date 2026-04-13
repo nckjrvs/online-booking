@@ -121,6 +121,9 @@
               <div class="select-chip active">Send now</div>
               <div class="select-chip">Schedule for later</div>
             </div>
+            <div class="gc-date-picker" style="display:none;margin-top:12px">
+              <input type="date" class="form-input" id="gc-delivery-date" min="2026-04-14">
+            </div>
           </div>
         </div>
 
@@ -210,6 +213,18 @@ customInput.addEventListener('input', () => {
     amountBtns.forEach(b => b.classList.remove('active'));
     setAmount('$' + val);
   }
+});
+
+// Delivery date toggle
+document.querySelectorAll('.select-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    chip.parentElement.querySelectorAll('.select-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    const datePicker = document.querySelector('.gc-date-picker');
+    if (datePicker) {
+      datePicker.style.display = chip.textContent.trim() === 'Schedule for later' ? 'block' : 'none';
+    }
+  });
 });
 </script>
 </body>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join ReDrewvination Membership | ReDrewvination</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    :root {
+      --brand-primary: #466EFF; --brand-primary-hover: #1E47F6; --brand-dark: #12151A;
+      --brand-light: #EDF1F5; --brand-accent: #466EFF; --brand-rose: #E4EAF0;
+      --text-primary: #12151A; --text-secondary: #555C67; --text-light: #788290; --border: #DCE2EA;
+      --serif: "Inter", "Graphik", Helvetica, sans-serif;
+    }
+    .plan-selector { display: flex; gap: 12px; margin-bottom: 32px; }
+    .plan-pill { flex: 1; padding: 14px; border: 1.5px solid var(--border); border-radius: var(--radius-md); text-align: center; cursor: pointer; transition: all 0.2s; background: var(--bg-white); font-family: var(--sans); }
+    .plan-pill:hover { border-color: var(--brand-primary); }
+    .plan-pill.active { border-color: var(--brand-primary); background: var(--brand-light); }
+    .plan-pill .pill-name { font-weight: 600; font-size: 15px; display: block; margin-bottom: 2px; }
+    .plan-pill .pill-price { font-size: 13px; color: var(--text-light); }
+    .plan-pill.active .pill-price { color: var(--brand-primary); }
+    .plan-perks-list { list-style: none; padding: 0; margin: 16px 0; }
+    .plan-perks-list li { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; font-size: 13px; color: var(--text-secondary); }
+    .plan-perks-list li::before { content: '✓'; color: var(--success); font-weight: 700; flex-shrink: 0; }
+    .payment-icons { display: flex; gap: 8px; margin-top: 8px; }
+    .payment-icon { width: 40px; height: 26px; border: 1px solid var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--text-light); background: var(--bg-white); }
+    .terms { font-size: 12px; color: var(--text-light); line-height: 1.6; margin-top: 16px; }
+    .terms a { color: var(--brand-primary); text-decoration: underline; }
+    .loc-note { background: var(--brand-light); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 13px; color: var(--text-secondary); margin-bottom: 24px; display: flex; align-items: center; gap: 8px; }
+    .loc-note strong { color: var(--brand-primary); }
+  </style>
+</head>
+<body>
+
+  <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
+    <a href="index.html" class="nav-logo" style="color:white">ReDrewvination</a>
+    <div class="nav-links">
+      <div class="nav-location-toggle" style="background:rgba(255,255,255,0.1)">
+        <button class="nav-location-btn active" style="background:rgba(255,255,255,0.15);color:white">Downtown</button>
+        <button class="nav-location-btn" style="color:rgba(255,255,255,0.5)">Midtown</button>
+        <button class="nav-location-btn" style="color:rgba(255,255,255,0.5)">Uptown</button>
+      </div>
+      <a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a>
+      <a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a>
+      <a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a>
+      <a href="book.html" class="nav-cta">Book Now</a>
+    </div>
+  </nav>
+
+  <div class="page-header"><h1>Start Your Membership</h1><p>Choose your plan and complete sign-up. Redeem at any ReDrewvination location.</p></div>
+
+  <section style="padding-top:40px">
+    <div class="layout-sidebar">
+      <div>
+        <div class="loc-note"><span>📍</span> Your membership works at <strong>all 3 ReDrewvination locations</strong> — Downtown, Midtown, and Uptown.</div>
+
+        <div>
+          <label class="form-label" style="font-size:15px;margin-bottom:12px">Select Your Plan</label>
+          <div class="plan-selector">
+            <div class="plan-pill" data-plan="essential" onclick="selectPlan('essential')"><span class="pill-name">Essential</span><span class="pill-price">$119/mo</span></div>
+            <div class="plan-pill active" data-plan="redrewvination" onclick="selectPlan('redrewvination')"><span class="pill-name">ReDrewvination</span><span class="pill-price">$249/mo</span></div>
+            <div class="plan-pill" data-plan="pinnacle" onclick="selectPlan('pinnacle')"><span class="pill-name">Pinnacle</span><span class="pill-price">$399/mo</span></div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:32px">
+          <label class="form-label" style="font-size:15px;margin-bottom:12px">Your Information</label>
+          <div class="form-row" style="margin-bottom:16px">
+            <div class="form-group" style="margin-bottom:0"><input type="text" class="form-input" placeholder="First name"></div>
+            <div class="form-group" style="margin-bottom:0"><input type="text" class="form-input" placeholder="Last name"></div>
+          </div>
+          <div class="form-group"><input type="email" class="form-input" placeholder="Email address"></div>
+          <div class="form-group"><input type="tel" class="form-input" placeholder="Phone number"></div>
+        </div>
+
+        <div style="margin-bottom:32px">
+          <label class="form-label" style="font-size:15px;margin-bottom:12px">Payment Method</label>
+          <div class="form-group"><input type="text" class="form-input" placeholder="Card number"></div>
+          <div class="form-row">
+            <div class="form-group" style="margin-bottom:0"><input type="text" class="form-input" placeholder="MM / YY"></div>
+            <div class="form-group" style="margin-bottom:0"><input type="text" class="form-input" placeholder="CVC"></div>
+          </div>
+          <div class="payment-icons"><div class="payment-icon">Visa</div><div class="payment-icon">MC</div><div class="payment-icon">Amex</div></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sidebar-card">
+          <h3 id="sidebar-plan-name">ReDrewvination Membership</h3>
+          <ul class="plan-perks-list" id="sidebar-perks">
+            <li>1 HydraFacial per month</li><li>24 units Botox per month</li><li>15% off additional services</li><li>15% off retail products</li><li>Priority booking at all locations</li><li>Free LED add-on ($50 value)</li>
+          </ul>
+          <div class="sidebar-row"><span class="label">Billing</span><span class="value">Monthly</span></div>
+          <div class="sidebar-row"><span class="label">Locations</span><span class="value">All 3 ReDrewvination studios</span></div>
+          <div class="sidebar-row"><span class="label">Commitment</span><span class="value">None — cancel anytime</span></div>
+          <div class="sidebar-total"><span>Due today</span><span id="sidebar-price">$249.00</span></div>
+          <p style="font-size:12px;color:var(--text-light);margin-top:4px">Then <span id="sidebar-recurring">$249.00</span>/month</p>
+          <div class="mt-24"><a href="memberships-confirm.html" class="btn-primary btn-block" style="text-align:center">Start Membership</a></div>
+          <div class="terms">By starting your membership you agree to our Terms of Service and Cancellation Policy.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div><div class="footer-brand">ReDrewvination</div><div class="footer-address">Downtown · Midtown · Uptown</div></div>
+      <div class="footer-links"><a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a><a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a><a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a></div>
+    </div>
+    <div class="footer-bottom"><a href="../index.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;text-underline-offset:2px">← All Portals</a> · Powered by Podium &middot; &copy; 2026 ReDrewvination.</div>
+  </footer>
+
+  <script>
+  const plans = {
+    essential: { name: 'Essential Membership', price: '$119.00', perks: ['1 HydraFacial per month','10% off all injectables','10% off retail products','Book at any location'] },
+    redrewvination: { name: 'ReDrewvination Membership', price: '$249.00', perks: ['1 HydraFacial per month','24 units Botox per month','15% off additional services','15% off retail products','Priority booking at all locations','Free LED add-on ($50 value)'] },
+    pinnacle: { name: 'Pinnacle Membership', price: '$399.00', perks: ['1 HydraFacial per month','40 units Botox per month','1 syringe filler per quarter','20% off all additional services','20% off retail products','Same-day booking at any location','Complimentary dermaplaning'] }
+  };
+  function selectPlan(key) {
+    const p = plans[key]; if (!p) return;
+    document.querySelectorAll('.plan-pill').forEach(el => el.classList.toggle('active', el.dataset.plan === key));
+    document.getElementById('sidebar-plan-name').textContent = p.name;
+    document.getElementById('sidebar-price').textContent = p.price;
+    document.getElementById('sidebar-recurring').textContent = p.price;
+    document.getElementById('sidebar-perks').innerHTML = p.perks.map(pk => '<li>' + pk + '</li>').join('');
+  }
+  const hash = window.location.hash.replace('#','');
+  if (plans[hash]) selectPlan(hash);
+  </script>
+
+</body>
+</html>
