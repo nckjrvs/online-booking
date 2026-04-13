@@ -65,8 +65,8 @@ function updateBookingSidebar() {
   // Remove old addon rows
   document.querySelectorAll('.sidebar-addon-row').forEach(r => r.remove());
 
-  // Find the first sidebar-row (base service)
-  const firstRow = document.querySelector('.sidebar-card .sidebar-row');
+  // Find the total row and insert addon rows just before it
+  const totalRow = document.querySelector('.sidebar-total');
 
   // Add rows for active addons
   const activeAddons = document.querySelectorAll('.addon-item.active');
@@ -87,8 +87,8 @@ function updateBookingSidebar() {
       '</span><span class="value">$' +
       price +
       '</span>';
-    if (firstRow && firstRow.nextSibling) {
-      firstRow.parentNode.insertBefore(row, firstRow.nextSibling);
+    if (totalRow) {
+      totalRow.parentNode.insertBefore(row, totalRow);
     }
   });
 
