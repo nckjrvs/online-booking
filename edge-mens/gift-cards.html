@@ -61,6 +61,7 @@
 
   <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
     <a href="index.html" class="nav-logo" style="color:white">Edge Men's</a>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="nav-links">
       <div class="nav-location-toggle">
         <button class="nav-location-btn active">SLC</button>
@@ -176,6 +177,14 @@
     <div class="footer-bottom"><a href="../index.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;text-underline-offset:2px">← All Portals</a> · Powered by Podium &middot; &copy; 2026 Edge Aesthetics.</div>
   </footer>
 
+  <div class="mobile-booking-bar">
+    <div>
+      <div class="mobile-bar-label">Total</div>
+      <div class="mobile-bar-total" id="mobile-gc-total">$100.00</div>
+    </div>
+    <a href="gift-cards-confirm.html" id="mobile-gc-btn" class="btn-primary">Purchase Gift Card</a>
+  </div>
+
 <script>
 document.querySelectorAll('.nav-location-btn').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -196,6 +205,8 @@ function setAmount(val) {
   previewAmount.textContent = '$' + num;
   sidebarAmount.textContent = '$' + num + '.00';
   sidebarTotal.textContent = '$' + num + '.00';
+  const mobileTotal = document.getElementById('mobile-gc-total');
+  if (mobileTotal) mobileTotal.textContent = '$' + num + '.00';
 }
 
 amountBtns.forEach(btn => {
@@ -228,5 +239,6 @@ document.querySelectorAll('.select-chip').forEach(chip => {
 });
 </script>
 <script src="../location-sync.js"></script>
+<script src="../mobile-nav.js"></script>
 </body>
 </html>

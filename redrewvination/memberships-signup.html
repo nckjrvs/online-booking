@@ -36,6 +36,7 @@
 
   <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
     <a href="index.html" class="nav-logo" style="color:white">ReDrewvination</a>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="nav-links">
       <div class="nav-location-toggle">
         <button class="nav-location-btn active">Downtown</button>
@@ -125,11 +126,23 @@
     document.getElementById('sidebar-price').textContent = p.price;
     document.getElementById('sidebar-recurring').textContent = p.price;
     document.getElementById('sidebar-perks').innerHTML = p.perks.map(pk => '<li>' + pk + '</li>').join('');
+    const mobileTotal = document.getElementById('mobile-membership-total');
+    if (mobileTotal) mobileTotal.textContent = p.price;
   }
   const hash = window.location.hash.replace('#','');
   if (plans[hash]) selectPlan(hash);
   </script>
 
 <script src="../location-sync.js"></script>
+<script src="../mobile-nav.js"></script>
+
+  <div class="mobile-booking-bar">
+    <div>
+      <div class="mobile-bar-label">Due today</div>
+      <div class="mobile-bar-total" id="mobile-membership-total">$249.00</div>
+    </div>
+    <a href="memberships-confirm.html" class="btn-primary">Start Membership</a>
+  </div>
+
 </body>
 </html>

@@ -35,6 +35,7 @@
 
   <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
     <a href="index.html" class="nav-logo" style="color:white">Rise Rejuvenation</a>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="nav-links">
       <div class="nav-location-toggle">
         <button class="nav-location-btn active">SLC</button>
@@ -111,6 +112,14 @@
     <div class="footer-bottom"><a href="../index.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;text-underline-offset:2px">← All Portals</a> · Powered by Podium &middot; &copy; 2026 Rise Rejuvenation.</div>
   </footer>
 
+  <div class="mobile-booking-bar">
+    <div>
+      <div class="mobile-bar-label">Due today</div>
+      <div class="mobile-bar-total" id="mobile-membership-total">$249.00</div>
+    </div>
+    <a href="memberships-confirm.html" class="btn-primary">Start Membership</a>
+  </div>
+
   <script>
   const plans = {
     essential: { name: 'Essential Membership', price: '$119.00', perks: ['1 HydraFacial per month','10% off all injectables','10% off retail products','Book at any location'] },
@@ -124,11 +133,14 @@
     document.getElementById('sidebar-price').textContent = p.price;
     document.getElementById('sidebar-recurring').textContent = p.price;
     document.getElementById('sidebar-perks').innerHTML = p.perks.map(pk => '<li>' + pk + '</li>').join('');
+    const mobileTotal = document.getElementById('mobile-membership-total');
+    if (mobileTotal) mobileTotal.textContent = p.price;
   }
   const hash = window.location.hash.replace('#','');
   if (plans[hash]) selectPlan(hash);
   </script>
 
 <script src="../location-sync.js"></script>
+<script src="../mobile-nav.js"></script>
 </body>
 </html>

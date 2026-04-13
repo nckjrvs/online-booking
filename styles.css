@@ -950,3 +950,435 @@ footer {
 .mb-24 { margin-bottom: 24px; }
 .mb-32 { margin-bottom: 32px; }
 .gap-12 { gap: 12px; }
+
+/* ══════════════════════════════════════════
+   Responsive — Mobile Styles
+   ══════════════════════════════════════════ */
+
+/* ── Hamburger Button (hidden on desktop) ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+.nav-hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.nav-hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.active span:nth-child(2) { opacity: 0; }
+.nav-hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile Booking Bar (hidden on desktop) ── */
+.mobile-booking-bar {
+  display: none;
+}
+
+/* ═══════════════════════════════════════
+   TABLET — max-width: 768px
+   ═══════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Navigation ── */
+  nav {
+    flex-wrap: wrap;
+    padding: 14px 20px !important;
+  }
+  .nav-hamburger {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 14px;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links a {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.7) !important;
+    font-size: 15px;
+  }
+  .nav-links a.active {
+    color: white !important;
+  }
+  .nav-location-toggle {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  .nav-location-btn {
+    flex: 1;
+    text-align: center;
+  }
+  .nav-cta {
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 8px;
+    padding: 14px 20px !important;
+    border-radius: 12px !important;
+  }
+
+  /* ── Section Spacing ── */
+  section {
+    padding: 48px 20px !important;
+  }
+  .page-header {
+    padding: 32px 20px !important;
+  }
+  .confirm-hero {
+    padding: 48px 20px !important;
+  }
+
+  /* ── Typography ── */
+  .page-header h1 {
+    font-size: 32px !important;
+  }
+  .section-title {
+    font-size: 28px !important;
+  }
+
+  /* ── Sidebar Layout → Single Column ── */
+  .layout-sidebar {
+    grid-template-columns: 1fr !important;
+    gap: 32px;
+  }
+  .sidebar-card {
+    position: static !important;
+    top: auto !important;
+  }
+
+  /* ── Hero (index.html) ── */
+  .hero {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    gap: 32px !important;
+  }
+  .hero h1 {
+    font-size: 36px !important;
+  }
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-image {
+    height: 280px !important;
+    order: -1;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .hero-stats {
+    justify-content: center;
+    gap: 24px !important;
+  }
+
+  /* ── Grids → 2 Columns ── */
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .locations-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    max-width: 100% !important;
+  }
+
+  /* ── Footer ── */
+  .footer-content {
+    flex-direction: column !important;
+    gap: 24px;
+    text-align: center;
+  }
+  .footer-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px !important;
+  }
+  .footer-bottom {
+    text-align: center;
+  }
+
+  /* ── Confirm Pages ── */
+  .confirm-card {
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    padding: 24px !important;
+  }
+
+  /* ── Location Banner ── */
+  .location-banner {
+    padding: 12px 20px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* ═══════════════════════════════════════
+   MOBILE — max-width: 640px
+   ═══════════════════════════════════════ */
+@media (max-width: 640px) {
+
+  /* ── All Grids → Single Column ── */
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+  .reviews-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .locations-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Amount Grid → 3 columns (tap-friendly) ── */
+  .amount-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .amount-btn {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ── Time Grid → 3 columns ── */
+  .time-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .time-slot {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ── Date Row → Horizontal Scroll ── */
+  .date-row {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap !important;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+  }
+  .date-row::-webkit-scrollbar { display: none; }
+  .date-btn {
+    min-width: 68px;
+    flex: 0 0 auto !important;
+  }
+
+  /* ── Form Rows → Stack ── */
+  .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* ── Hero ── */
+  .hero-image {
+    height: 220px !important;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 20px !important;
+  }
+
+  /* ── Service Hero (book-service) ── */
+  .service-hero {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 16px !important;
+  }
+  .service-hero h1 {
+    font-size: 24px !important;
+  }
+
+  /* ── Touch Targets ── */
+  .select-chip {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .addon-item {
+    padding: 14px !important;
+  }
+  .provider-select-card {
+    padding: 14px !important;
+  }
+
+  /* ── Mobile Booking Bar (fixed bottom CTA) ── */
+  .mobile-booking-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid var(--border);
+    padding: 12px 20px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 200;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.08);
+  }
+  .mobile-bar-total {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  .mobile-bar-label {
+    font-size: 11px;
+    color: var(--text-light);
+    margin-bottom: 2px;
+  }
+  .mobile-booking-bar .btn-primary {
+    padding: 12px 28px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  /* ── Add bottom padding so content isn't hidden behind fixed bar ── */
+  body:has(.mobile-booking-bar) footer {
+    padding-bottom: 80px !important;
+  }
+
+  /* ── Section Spacing ── */
+  section {
+    padding: 40px 16px !important;
+  }
+  .page-header {
+    padding: 28px 16px !important;
+  }
+
+  /* ── Pricing Cards ── */
+  .pricing-card {
+    padding: 24px 20px !important;
+  }
+  .pricing-card .price-amount {
+    font-size: 32px !important;
+  }
+
+  /* ── Gift Card Preview ── */
+  .gc-preview {
+    padding: 24px !important;
+  }
+  .gc-preview-amount {
+    font-size: 40px !important;
+  }
+
+  /* ── Confirm Pages ── */
+  .confirm-hero h1 {
+    font-size: 28px !important;
+  }
+  .confirm-card {
+    margin-top: -20px !important;
+  }
+}
+
+/* ═══════════════════════════════════════
+   SMALL MOBILE — max-width: 480px
+   ═══════════════════════════════════════ */
+@media (max-width: 480px) {
+
+  /* ── Typography ── */
+  .page-header h1 {
+    font-size: 26px !important;
+  }
+  .section-title {
+    font-size: 24px !important;
+  }
+  .hero h1 {
+    font-size: 30px !important;
+  }
+  .hero-stat-value {
+    font-size: 22px !important;
+  }
+
+  /* ── Grids ── */
+  .grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+  .amount-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* ── Spacing ── */
+  section {
+    padding: 32px 12px !important;
+  }
+  .page-header {
+    padding: 24px 12px !important;
+  }
+  .confirm-card {
+    margin-left: 8px !important;
+    margin-right: 8px !important;
+    padding: 20px !important;
+  }
+
+  /* ── Footer ── */
+  .footer-links {
+    flex-direction: column;
+    gap: 12px !important;
+  }
+
+  /* ── Hero Stats ── */
+  .hero-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px !important;
+  }
+
+  /* ── Plan Selector (memberships-signup) ── */
+  .plan-selector {
+    flex-direction: column !important;
+  }
+
+  /* ── GC Preview ── */
+  .gc-preview-amount {
+    font-size: 36px !important;
+  }
+
+  /* ── Pricing ── */
+  .pricing-card .price-amount {
+    font-size: 28px !important;
+  }
+}

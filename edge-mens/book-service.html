@@ -32,6 +32,7 @@
 <body>
   <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
     <a href="index.html" class="nav-logo" style="color:white">Edge Men's</a>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="nav-links">
       <a href="book.html" class="active" style="color:white">Services</a>
       <a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a>
@@ -94,6 +95,24 @@
     <div class="footer-content"><div><div class="footer-brand">Edge Men's</div><div class="footer-address">SLC &middot; Lehi</div></div><div class="footer-links"><a href="book.html">Services</a><a href="gift-cards.html">Gift Cards</a><a href="memberships.html">Memberships</a></div></div>
     <div class="footer-bottom"><a href="../index.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;text-underline-offset:2px">← All Portals</a> · Powered by Podium &middot; &copy; 2026 Edge Aesthetics.</div>
   </footer>
+
+  <div class="mobile-booking-bar">
+    <div>
+      <div class="mobile-bar-label">Estimated Total</div>
+      <div class="mobile-bar-total" id="mobile-total">$338</div>
+    </div>
+    <a href="book-confirm.html" class="btn-primary">Continue to Book</a>
+  </div>
+
 <script src="../booking-interactions.js"></script>
+<script>
+const sidebarTotal = document.querySelector('.sidebar-total span:last-child');
+const mobileTotal = document.getElementById('mobile-total');
+if (sidebarTotal && mobileTotal) {
+  new MutationObserver(() => { mobileTotal.textContent = sidebarTotal.textContent; })
+    .observe(sidebarTotal, { childList: true, characterData: true, subtree: true });
+}
+</script>
+<script src="../mobile-nav.js"></script>
 </body>
 </html>

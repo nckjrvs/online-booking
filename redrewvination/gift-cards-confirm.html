@@ -27,6 +27,7 @@
 <body>
   <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
     <a href="index.html" class="nav-logo" style="color:white">ReDrewvination</a>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="nav-links">
       <a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a>
       <a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a>
@@ -75,5 +76,6 @@ if (loc) {
   if (el) el.textContent = loc === 'All Locations' ? 'All ReDrewvination locations' : 'ReDrewvination ' + loc + ' only';
 }
 </script>
+<script src="../mobile-nav.js"></script>
 </body>
 </html>
