@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment | Let's Glow Girls</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .category-section { margin-bottom: 48px; }
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--border);
+    }
+    .category-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: var(--brand-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    .category-header h2 {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 500;
+    }
+    .category-header .count {
+      font-size: 13px;
+      color: var(--text-light);
+      margin-left: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
+    <a href="lets-glow-girls.html" class="nav-logo" style="color:white">Let's Glow Girls</a>
+    <div class="nav-links">
+      <a href="book.html" class="active" style="color:white">Services</a>
+      <a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a>
+      <a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a>
+      <a href="book.html" class="nav-cta" style="background:var(--brand-accent)">Book Now</a>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="lets-glow-girls.html">Let's Glow Girls</a>
+    <span class="sep">/</span>
+    <span>Book an Appointment</span>
+  </div>
+
+  <div class="page-header">
+    <h1>Book an Appointment</h1>
+    <p>Choose a service to get started. All treatments include a complimentary consultation.</p>
+  </div>
+
+  <section>
+    <div class="layout-sidebar" style="max-width:1024px;margin:0 auto">
+      <div>
+
+      <!-- Injectables -->
+      <div class="category-section" id="injectables">
+        <div class="category-header">
+          <div class="category-icon">💉</div>
+          <h2>Injectables</h2>
+          <div class="count">6 services</div>
+        </div>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon">💉</div>
+          <div class="service-list-info"><h4>Botox</h4><p>Smooth fine lines and wrinkles with precision injections</p></div>
+          <div class="service-list-meta"><div class="price">$12/unit</div><div class="duration">30 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon">💉</div>
+          <div class="service-list-info"><h4>Dysport</h4><p>Fast-acting wrinkle relaxer with natural-looking results</p></div>
+          <div class="service-list-meta"><div class="price">$10/unit</div><div class="duration">30 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon">💉</div>
+          <div class="service-list-info"><h4>Lip Filler</h4><p>Juvederm Ultra for natural volume and definition</p></div>
+          <div class="service-list-meta"><div class="price">$650/syringe</div><div class="duration">45 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon">💉</div>
+          <div class="service-list-info"><h4>Cheek Filler</h4><p>Restore volume and lift with Juvederm Voluma</p></div>
+          <div class="service-list-meta"><div class="price">$750/syringe</div><div class="duration">45 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon">💉</div>
+          <div class="service-list-info"><h4>Jawline Contouring</h4><p>Non-surgical jawline definition with dermal filler</p></div>
+          <div class="service-list-meta"><div class="price">$800/syringe</div><div class="duration">45 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon">💉</div>
+          <div class="service-list-info"><h4>Kybella</h4><p>Permanent double chin reduction without surgery</p></div>
+          <div class="service-list-meta"><div class="price">$1,200</div><div class="duration">30 min</div></div>
+        </a>
+      </div>
+
+      <!-- Laser -->
+      <div class="category-section" id="laser">
+        <div class="category-header">
+          <div class="category-icon">✨</div>
+          <h2>Laser Treatments</h2>
+          <div class="count">4 services</div>
+        </div>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon" style="background:#e8ece4">✨</div>
+          <div class="service-list-info"><h4>Laser Hair Removal</h4><p>Permanent hair reduction for face and body</p></div>
+          <div class="service-list-meta"><div class="price">From $150</div><div class="duration">15–60 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon" style="background:#e8ece4">✨</div>
+          <div class="service-list-info"><h4>IPL Photofacial</h4><p>Reduce sun damage, redness, and uneven pigmentation</p></div>
+          <div class="service-list-meta"><div class="price">$350</div><div class="duration">30 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon" style="background:#e8ece4">✨</div>
+          <div class="service-list-info"><h4>Laser Skin Resurfacing</h4><p>Fractional CO2 for texture, scarring, and fine lines</p></div>
+          <div class="service-list-meta"><div class="price">$800</div><div class="duration">45 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon" style="background:#e8ece4">✨</div>
+          <div class="service-list-info"><h4>Tattoo Removal</h4><p>PicoSure laser technology for safe, effective removal</p></div>
+          <div class="service-list-meta"><div class="price">From $200</div><div class="duration">20 min</div></div>
+        </a>
+      </div>
+
+      <!-- Facials -->
+      <div class="category-section" id="facials">
+        <div class="category-header">
+          <div class="category-icon">🧴</div>
+          <h2>Medical Facials</h2>
+          <div class="count">4 services</div>
+        </div>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon" style="background:#e4e8de">🧴</div>
+          <div class="service-list-info"><h4>HydraFacial</h4><p>Deep cleanse, exfoliate, extract, and hydrate in one session</p></div>
+          <div class="service-list-meta"><div class="price">$199</div><div class="duration">45 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon" style="background:#e4e8de">🧴</div>
+          <div class="service-list-info"><h4>Chemical Peel</h4><p>Medical-grade peels for acne, aging, and hyperpigmentation</p></div>
+          <div class="service-list-meta"><div class="price">$175</div><div class="duration">30 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon" style="background:#e4e8de">🧴</div>
+          <div class="service-list-info"><h4>Microneedling</h4><p>Collagen induction therapy for scarring and texture</p></div>
+          <div class="service-list-meta"><div class="price">$350</div><div class="duration">60 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon" style="background:#e4e8de">🧴</div>
+          <div class="service-list-info"><h4>Dermaplaning</h4><p>Remove dead skin and peach fuzz for a luminous finish</p></div>
+          <div class="service-list-meta"><div class="price">$125</div><div class="duration">30 min</div></div>
+        </a>
+      </div>
+
+      <!-- Body -->
+      <div class="category-section" id="body">
+        <div class="category-header">
+          <div class="category-icon">🌿</div>
+          <h2>Body Contouring</h2>
+          <div class="count">3 services</div>
+        </div>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon" style="background:#eae8e0">🌿</div>
+          <div class="service-list-info"><h4>CoolSculpting</h4><p>FDA-cleared fat freezing for stubborn areas</p></div>
+          <div class="service-list-meta"><div class="price">$750/area</div><div class="duration">35 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon" style="background:#eae8e0">🌿</div>
+          <div class="service-list-info"><h4>Skin Tightening</h4><p>Radiofrequency therapy for firmer, smoother skin</p></div>
+          <div class="service-list-meta"><div class="price">$600</div><div class="duration">45 min</div></div>
+        </a>
+        <a href="book-service.html" class="service-list-item">
+          <div class="service-list-icon" style="background:#eae8e0">🌿</div>
+          <div class="service-list-info"><h4>Cellulite Treatment</h4><p>QWO injectable treatment for moderate to severe cellulite</p></div>
+          <div class="service-list-meta"><div class="price">$850</div><div class="duration">30 min</div></div>
+        </a>
+      </div>
+
+      </div>
+
+      <!-- Hours Sidebar -->
+      <div>
+        <div class="sidebar-card">
+          <h3>Hours of Operation</h3>
+          <div class="sidebar-row"><span class="label">Sunday</span><span class="value">Closed</span></div>
+          <div class="sidebar-row"><span class="label">Monday</span><span class="value">9 AM – 6 PM</span></div>
+          <div class="sidebar-row"><span class="label">Tuesday</span><span class="value">9 AM – 6 PM</span></div>
+          <div class="sidebar-row"><span class="label">Wednesday</span><span class="value">9 AM – 6 PM</span></div>
+          <div class="sidebar-row"><span class="label">Thursday</span><span class="value">9 AM – 6 PM</span></div>
+          <div class="sidebar-row"><span class="label">Friday</span><span class="value">9 AM – 6 PM</span></div>
+          <div class="sidebar-row"><span class="label">Saturday</span><span class="value">10 AM – 4 PM</span></div>
+          <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);font-size:13px;color:var(--text-light)">
+            <div style="margin-bottom:4px"><strong style="color:var(--text-primary)">📍 Salt Lake City</strong></div>
+            2847 Highland Drive, Suite 200<br>(801) 555-GLOW
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div><div class="footer-brand">Let's Glow Girls</div><div class="footer-address">2847 Highland Drive, Suite 200<br>Salt Lake City, UT 84106</div></div>
+      <div class="footer-links"><a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a><a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a><a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a></div>
+    </div>
+    <div class="footer-bottom"><a href="index.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;text-underline-offset:2px">← All Portals</a> · Powered by Podium &middot; &copy; 2026 Let's Glow Girls.</div>
+  </footer>
+
+</body>
+</html>

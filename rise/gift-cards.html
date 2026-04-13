@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Cards | Rise Rejuvenation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    :root {
+      --brand-primary: #77412c;
+      --brand-primary-hover: #643625;
+      --brand-dark: #141a36;
+      --brand-light: #f6f2f0;
+      --brand-accent: #c9a96e;
+      --brand-rose: #d4c0b4;
+      --text-primary: #141a36;
+      --text-secondary: #4a4458;
+      --text-light: #8a8498;
+      --border: #dcd6d2;
+    }
+    .gc-preview {
+      background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-dark) 100%);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 32px;
+      aspect-ratio: 1.6;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .gc-preview::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 80%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
+    }
+    .gc-preview-brand { font-family: var(--serif); font-size: 24px; font-weight: 500; position: relative; }
+    .gc-preview-amount { font-family: var(--serif); font-size: 56px; font-weight: 600; position: relative; }
+    .gc-preview-footer { display: flex; justify-content: space-between; font-size: 13px; opacity: 0.7; position: relative; }
+    .gc-message-preview { background: var(--brand-light); border-radius: var(--radius-md); padding: 16px; margin-top: 16px; font-size: 14px; color: var(--text-secondary); font-style: italic; min-height: 60px; }
+    .gc-redeem-note { background: var(--brand-light); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px 18px; font-size: 13px; color: var(--text-secondary); margin-bottom: 32px; display: flex; align-items: center; gap: 10px; }
+    .gc-redeem-note strong { color: var(--brand-primary); }
+  </style>
+</head>
+<body>
+
+  <div style="background:var(--brand-dark);color:white;text-align:center;padding:10px 40px;font-size:13px;">
+  </div>
+
+  <nav style="background:var(--brand-dark);border-bottom:1px solid rgba(255,255,255,0.1)">
+    <a href="index.html" class="nav-logo" style="color:white">Rise Rejuvenation</a>
+    <div class="nav-links">
+      <div class="nav-location-toggle" style="background:rgba(255,255,255,0.1)">
+        <button class="nav-location-btn active" style="background:rgba(255,255,255,0.15);color:white">SLC</button>
+        <button class="nav-location-btn" style="color:rgba(255,255,255,0.5)">Provo</button>
+        <button class="nav-location-btn" style="color:rgba(255,255,255,0.5)">Lehi</button>
+      </div>
+      <a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a>
+      <a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a>
+      <a href="gift-cards.html" class="active" style="color:white">Gift Cards</a>
+      <a href="book.html" class="nav-cta">Book Now</a>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="index.html">Rise Rejuvenation</a>
+    <span class="sep">/</span>
+    <span>Gift Cards</span>
+  </div>
+
+  <div class="page-header">
+    <h1>Give the Gift of Rise</h1>
+    <p>Digital gift cards delivered instantly via email. Redeemable at any Rise location — SLC, Provo, or Lehi.</p>
+  </div>
+
+  <section>
+    <div class="layout-sidebar">
+      <div>
+        <!-- Multi-loc redemption note -->
+        <div class="gc-redeem-note">
+          <span>📍</span>
+          Redeemable at <strong>all 3 Rise locations</strong> — Salt Lake City, Provo, and Lehi. No location selection needed.
+        </div>
+
+        <!-- Amount -->
+        <div style="margin-bottom:40px">
+          <label class="form-label" style="font-size:15px;margin-bottom:12px">Choose an Amount</label>
+          <div class="amount-grid">
+            <div class="amount-btn">$50</div>
+            <div class="amount-btn active">$100</div>
+            <div class="amount-btn">$150</div>
+            <div class="amount-btn">$200</div>
+            <div class="amount-btn">$250</div>
+            <div class="amount-btn">$300</div>
+            <div class="amount-btn">$400</div>
+            <div class="amount-btn">$500</div>
+          </div>
+          <div style="margin-top:12px">
+            <input type="text" class="form-input" placeholder="Or enter a custom amount ($25 – $1,000)">
+          </div>
+        </div>
+
+        <!-- Recipient -->
+        <div style="margin-bottom:40px">
+          <label class="form-label" style="font-size:15px;margin-bottom:12px">Recipient Details</label>
+          <div class="form-row" style="margin-bottom:16px">
+            <div class="form-group" style="margin-bottom:0"><input type="text" class="form-input" placeholder="Recipient's name"></div>
+            <div class="form-group" style="margin-bottom:0"><input type="email" class="form-input" placeholder="Recipient's email"></div>
+          </div>
+          <div class="form-group">
+            <textarea class="form-input" placeholder="Add a personal message (optional)" rows="3">You deserve this! Pick any Rise location and treat yourself 🌿</textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Delivery Date</label>
+            <div class="select-group">
+              <div class="select-chip active">Send now</div>
+              <div class="select-chip">Schedule for later</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sender -->
+        <div style="margin-bottom:40px">
+          <label class="form-label" style="font-size:15px;margin-bottom:12px">Your Details</label>
+          <div class="form-row" style="margin-bottom:16px">
+            <div class="form-group" style="margin-bottom:0"><input type="text" class="form-input" placeholder="Your name"></div>
+            <div class="form-group" style="margin-bottom:0"><input type="email" class="form-input" placeholder="Your email"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Preview -->
+      <div>
+        <div class="sidebar-card" style="padding:0;overflow:hidden;border:none">
+          <div class="gc-preview">
+            <div class="gc-preview-brand">Rise Rejuvenation</div>
+            <div class="gc-preview-amount">$100</div>
+            <div class="gc-preview-footer">
+              <span>Gift Card</span>
+              <span>book.podium.com/rise</span>
+            </div>
+          </div>
+          <div style="padding:0 4px">
+            <div class="gc-message-preview">
+              "You deserve this! Pick any Rise location and treat yourself 🌿"
+            </div>
+            <div style="padding:20px 0">
+              <div class="sidebar-row"><span class="label">Gift card amount</span><span class="value">$100.00</span></div>
+              <div class="sidebar-row"><span class="label">Redeemable at</span><span class="value">All locations</span></div>
+              <div class="sidebar-total"><span>Total</span><span>$100.00</span></div>
+              <div class="mt-24">
+                <a href="gift-cards-confirm.html" class="btn-primary btn-block" style="text-align:center">Purchase Gift Card</a>
+              </div>
+              <p style="font-size:12px;color:var(--text-light);text-align:center;margin-top:12px">Secure checkout powered by Podium Payments</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div><div class="footer-brand">Rise Rejuvenation</div><div class="footer-address">SLC &middot; Provo &middot; Lehi</div></div>
+      <div class="footer-links"><a href="book.html" style="color:rgba(255,255,255,0.7)">Services</a><a href="gift-cards.html" style="color:rgba(255,255,255,0.7)">Gift Cards</a><a href="memberships.html" style="color:rgba(255,255,255,0.7)">Memberships</a></div>
+    </div>
+    <div class="footer-bottom"><a href="../index.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;text-underline-offset:2px">← All Portals</a> · Powered by Podium &middot; &copy; 2026 Rise Rejuvenation.</div>
+  </footer>
+
+<script>
+const names = { SLC: 'Salt Lake City', Provo: 'Provo', Lehi: 'Lehi' };
+document.querySelectorAll('.nav-location-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.nav-location-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const loc = btn.textContent.trim();
+    const banner = document.querySelector('.location-banner strong');
+    if (banner) banner.textContent = names[loc] || loc;
+  });
+});
+
+const amountBtns = document.querySelectorAll('.amount-btn');
+const customInput = document.querySelector('.form-input[placeholder*="custom amount"]');
+const previewAmount = document.querySelector('.gc-preview-amount');
+const sidebarAmount = document.querySelector('.sidebar-row .value');
+const sidebarTotal = document.querySelector('.sidebar-total span:last-child');
+
+function setAmount(val) {
+  const num = parseInt(val.replace(/[^0-9]/g, ''));
+  if (!num || num < 25 || num > 1000) return;
+  previewAmount.textContent = '$' + num;
+  sidebarAmount.textContent = '$' + num + '.00';
+  sidebarTotal.textContent = '$' + num + '.00';
+}
+
+amountBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    amountBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    customInput.value = '';
+    setAmount(btn.textContent);
+  });
+});
+
+customInput.addEventListener('input', () => {
+  const val = customInput.value.replace(/[^0-9]/g, '');
+  if (val) {
+    amountBtns.forEach(b => b.classList.remove('active'));
+    setAmount('$' + val);
+  }
+});
+</script>
+</body>
+</html>
