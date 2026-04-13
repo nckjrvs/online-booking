@@ -18,7 +18,7 @@
   --bg-warm: #f7f8f5;
   --border: #d4d8ce;
   --success: #3a8a5c;
-  --serif: 'Cormorant Garamond', Georgia, serif;
+  --serif: 'Playfair Display SC', Georgia, serif;
   --sans: 'Inter', -apple-system, sans-serif;
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -339,6 +339,7 @@ section { padding: 80px 40px; }
 }
 .form-input:focus { border-color: var(--brand-primary); }
 .form-input::placeholder { color: var(--text-light); }
+select.form-input { padding-right: 36px; }
 
 textarea.form-input { min-height: 80px; resize: vertical; }
 

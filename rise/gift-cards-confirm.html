@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gift Card Sent! | Rise Rejuvenation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
   <style>
     :root { --brand-primary: #77412c; --brand-primary-hover: #643625; --brand-dark: #141a36; --brand-light: #f6f2f0; --brand-accent: #c9a96e; --brand-rose: #d4c0b4; --text-primary: #141a36; --text-secondary: #4a4458; --text-light: #8a8498; --border: #dcd6d2; }
@@ -46,7 +46,7 @@
         <div class="confirm-row"><span class="label">Sent to</span><span class="value">sarah@email.com</span></div>
         <div class="confirm-row"><span class="label">From</span><span class="value">Michael T.</span></div>
         <div class="confirm-row"><span class="label">Delivery</span><span class="value">Sent immediately</span></div>
-        <div class="confirm-row"><span class="label">Redeemable at</span><span class="value">All Rise locations</span></div>
+        <div class="confirm-row"><span class="label">Redeemable at</span><span class="value" id="confirm-location">All Rise locations</span></div>
       </div>
       <div class="confirm-card-section">
         <h3>Payment</h3>
@@ -66,5 +66,13 @@
     <div class="footer-content"><div><div class="footer-brand">Rise Rejuvenation</div><div class="footer-address">SLC &middot; Provo &middot; Lehi</div></div><div class="footer-links"><a href="book.html">Services</a><a href="gift-cards.html">Gift Cards</a><a href="memberships.html">Memberships</a></div></div>
     <div class="footer-bottom"><a href="../index.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;text-underline-offset:2px">← All Portals</a> · Powered by Podium &middot; &copy; 2026 Rise Rejuvenation.</div>
   </footer>
+<script>
+const params = new URLSearchParams(window.location.search);
+const loc = params.get('location');
+if (loc) {
+  const el = document.getElementById('confirm-location');
+  if (el) el.textContent = loc === 'All Locations' ? 'All Rise locations' : 'Rise ' + loc + ' only';
+}
+</script>
 </body>
 </html>
